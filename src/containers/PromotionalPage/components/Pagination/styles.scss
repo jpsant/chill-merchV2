@@ -1,0 +1,48 @@
+@import '../../../../mixins/mixins.scss';
+
+.pagination {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  list-style: none;
+  z-index: 9999;
+  animation: pageSelectorIn 0.8s forwards 0.9s;
+
+  li {
+    position: relative;
+    margin: 14px 0;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    transition: all 0.3s;
+    opacity: 0.6;
+
+    @include respond_to(mobile) {
+      display: none;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+
+  a {
+    position: absolute;
+    text-decoration: none;
+    left: 0;
+    top: 0;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.selectedPage {
+  transform: scale(1.3);
+  opacity: 1 !important;
+}

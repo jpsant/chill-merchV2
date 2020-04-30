@@ -1,0 +1,21 @@
+.languageSwitcherContainer {
+  position: absolute;
+  z-index: 99;
+
+  &-languageSwitcherBG {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    width: 200px;
+  }
+
+  &-languageSwitcherFlag {
+    position: fixed;
+    top: 12px;
+    right: 32px;
+    z-index: 99;
+    width: 86px;
+    cursor: pointer;
+  }
+}

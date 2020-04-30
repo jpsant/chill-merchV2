@@ -1,0 +1,15 @@
+.homeSectionContainer {
+  height: 100vh;
+  background: #6291AF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  &__description {
+    font-family: 'Lobster Regular';
+    font-size: 45px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,54 @@
+.left-button-container {
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: all .3s;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px; 
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+    img {
+      width: 78px;
+      left: 32px;
+      bottom: 16px;
+    }
+  }
+}
+
+.right-button-container {
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transition: all .3s;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+    img {
+      width: 78px;
+      right: 32px;
+      bottom: 16px;
+    }
+  }
+
+}
