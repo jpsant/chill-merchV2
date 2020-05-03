@@ -1,13 +1,13 @@
 .left-button-container {
   z-index: 999;
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   transition: all .3s;
 
   img {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 200px; 
   }

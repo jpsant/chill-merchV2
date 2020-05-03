@@ -13,7 +13,8 @@ class PromotionalPage extends Component {
 
   state = {
     currentPage: 0,
-    currentLanguage: 'english'
+    currentLanguage: 'english',
+    seasonsSection: 0
   }
 
   handlePageChange = number => {
@@ -24,23 +25,39 @@ class PromotionalPage extends Component {
     this.setState({ currentLanguage: language })
   }
 
+  seasonsSectionHandler = (number) => {
+    let newSection = number + this.state.seasonsSection;
+    
+    if (newSection < 0) {
+      this.setState({ seasonsSection: 0 });
+    }
+    else if (newSection >= 3) {
+      this.setState({ seasonsSection: 3 });
+    }
+    else {
+      this.setState({ seasonsSection: newSection })
+    }
+  }
+
   render() {
     return (
       <>
-        <Pagination 
-        currentPage={this.state.currentPage}
-        section={(number) => this.handlePageChange(number)}/>
-        <LanguageSwitcher 
-        language={this.state.currentLanguage}
-        languageChanger={this.handleLanguageChange}/>
+        <Pagination
+          handleSection={(number) => this.seasonsSectionHandler(number)}
+          currentPage={this.state.currentPage}
+          section={(number) => this.handlePageChange(number)}
+          currentSection={this.state.seasonsSection} />
+        <LanguageSwitcher
+          language={this.state.currentLanguage}
+          languageChanger={this.handleLanguageChange} />
         <ReactPageScroller
           pageOnChange={this.handlePageChange}
           customPageNumber={this.state.currentPage}
         >
-          <HomeSection language={this.state.currentLanguage} />
-          <CollectionsSection language={this.state.currentLanguage} />
-          <SeasonsSection language={this.state.currentLanguage} />
-          <ContactSection language={this.state.currentLanguage} />
+          <HomeSection currentPage={this.state.currentPage} language={this.state.currentLanguage} />
+          <SeasonsSection currentSection={this.state.seasonsSection} currentPage={this.state.currentPage} language={this.state.currentLanguage} />
+          <CollectionsSection currentPage={this.state.currentPage} language={this.state.currentLanguage} />
+          <ContactSection currentPage={this.state.currentPage} language={this.state.currentLanguage} />
         </ReactPageScroller>
       </>
     )

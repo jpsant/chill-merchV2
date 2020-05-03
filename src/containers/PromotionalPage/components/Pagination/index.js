@@ -3,10 +3,10 @@ import './styles.scss';
 
 import SectionsManager from '../SectionsManager';
 
-export default function Pagination({ currentPage, section }) {
+export default function Pagination({ currentPage, section, handleSection, currentSection }) {
   return (
     <>
-      <SectionsManager currentPage={ currentPage } />
+      <SectionsManager currentSection={currentSection} changeSection={(number) => handleSection(number)} currentPage={currentPage} />
       <ul className="pagination">
         <li className={currentPage === 0 ? "selectedPage" : ''}>
           <a href="#" onClick={() => section(0)}></a>
