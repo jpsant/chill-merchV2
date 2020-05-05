@@ -1,0 +1,52 @@
+@import '../../../../mixins/mixins.scss';
+
+.CollectionCard-container {
+  width: 305px;
+  height: 485px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #114566;
+  border-radius: 20px;
+  bottom: 0;
+
+  &__image {
+    width: 283px;
+    height: 225px;
+  }
+
+  &__texts {
+    text-align: center;
+    font-family: 'Roboto Regular';
+    width: 265px;
+    
+    h1 {
+      font-size: 32px;
+      margin-bottom: 0;
+    }
+    
+    h2 {
+      font-weight: 400;
+      font-size: 18px;
+      margin: 28px 0;
+    }
+  }
+
+  &__buttons {
+    align-items: center;
+    justify-content: center;
+    width: 265px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 6px;
+
+    img {
+      cursor: pointer;
+    }
+
+    img:nth-of-type(2) {
+      margin: 0 35px;
+    }
+  }
+}

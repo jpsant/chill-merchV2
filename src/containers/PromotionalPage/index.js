@@ -12,7 +12,7 @@ import Pagination from './components/Pagination';
 class PromotionalPage extends Component {
 
   state = {
-    currentPage: 0,
+    currentPage: 2,
     currentLanguage: 'english',
     seasonsSection: 0
   }

@@ -1,8 +1,32 @@
+@import '../../../../mixins/mixins.scss';
+
 .collectionsSectionContainer {
-  height: 100vh;
+  position: relative;
+  height: 100%;
   background: #6291AF;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   color: white;
+
+  &-h1 {
+    position: absolute;
+    top: 32px;
+    font-size: 95px;
+    font-weight: 400;
+    font-family: 'Lobster Regular';
+    margin: 0;
+  }
+
+  &__carousel {
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-40%);
+  }
+}
+
+.carousel-item {
+  padding: 10px;
 }
