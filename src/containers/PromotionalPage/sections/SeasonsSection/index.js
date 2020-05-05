@@ -2,7 +2,6 @@ import React from 'react';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import './styles.scss';
 
-import BearLogo from '../../../../assets/svgs/Bear.svg';
 import Snow from '../../../../assets/svgs/snow.svg';
 import SpringFlower from '../../../../assets/svgs/spring-flower.svg'
 import AutumnLeaf from '../../../../assets/svgs/autumn-leaf.svg'
@@ -117,7 +116,6 @@ export default function SeasonsSection({ currentPage, currentSection }) {
             currentSection === 2 ? '#EA8C5C' :
               currentSection === 3 ? '#E9C02E' : '#6291AF'
       }}>
-      <img className="seasonSectionContainer__bearLogo" src={BearLogo} alt="Bear Logo" />
       <SwitchTransition>
         <CSSTransition
           classNames='fade'

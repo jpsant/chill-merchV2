@@ -1,8 +1,162 @@
+@import "../../../../mixins/mixins.scss";
+
 .contactSectionContainer {
+  position: relative;
   height: 100vh;
-  background: #6291AF;
+  background: #6291af;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+
+  &__visit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1055px;
+    font-family: "Lobster Regular";
+
+    &-title {
+      font-weight: 400;
+      font-size: 100px;
+      text-align: center;
+      margin: 0;
+    }
+
+    &-logo {
+      width: 174px;
+      margin: 57px 0;
+    }
+
+    &-button {
+      font-family: "Lobster Regular";
+      width: 385px;
+      height: 81px;
+      background-color: white;
+      color: #4795bc;
+      border: none;
+      border-radius: 20px;
+      font-size: 40px;
+      cursor: pointer;
+      transition: all 0.4s;
+    }
+
+    &-button:hover {
+      color: white !important;
+      background: transparent;
+      border: 2px solid white;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+
+    h1 {
+      font-size: 30px;
+      font-family: "Roboto Regular";
+      color: white;
+    }
+
+    &-links {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: auto auto auto auto;
+      grid-column-gap: 34px;
+
+      &-instagram {
+        width: 52px;
+        opacity: 0.6;
+        transition: opacity .3s;
+      }
+
+      &-instagram:hover {
+        opacity: 1;
+      }
+
+      &-facebook {
+        width: 52px;
+        opacity: 0.6;
+        transition: opacity .3s;
+      }
+
+      &-facebook:hover {
+        opacity: 1;
+      }
+
+      &-twitter {
+        width: 52px;
+        opacity: 0.6;
+        transition: opacity .3s;
+      }
+
+      &-twitter:hover {
+        opacity: 1;
+      }
+
+      &-snapchat {
+        width: 52px;
+        opacity: 0.6;
+        transition: opacity .3s;
+      }
+
+      &-snapchat:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__newsLetter {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+
+    h1 {
+      font-family: 'Roboto Regular';
+      font-size: 30px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input[type=text] {
+        width: 262px;
+        height: 58px;
+        border: none;
+        border-radius: 5px;
+        padding-left: 16px;
+      }
+
+      button {
+        margin-left: 16px;
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 86px;
+        height: 59px;
+        cursor: pointer;
+        filter: brightness(85%);
+        transition: filter .4s;
+      }
+
+      button:hover {
+        filter: brightness(100%);
+      }
+    }
+  }
 }

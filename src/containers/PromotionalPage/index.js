@@ -9,6 +9,10 @@ import ContactSection from './sections/ContactSection';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import Pagination from './components/Pagination';
 
+import BearLogo from '../../assets/svgs/Bear.svg';
+
+import './styles.scss';
+
 class PromotionalPage extends Component {
 
   state = {
@@ -42,6 +46,8 @@ class PromotionalPage extends Component {
   render() {
     return (
       <>
+      <img className="BearLogo" src={BearLogo} alt="Bear Logo"
+        style={{opacity: this.state.currentPage === 1 ? 1 : this.state.currentPage === 2 ? 1 : 0}}/>
         <Pagination
           handleSection={(number) => this.seasonsSectionHandler(number)}
           currentPage={this.state.currentPage}
@@ -54,10 +60,10 @@ class PromotionalPage extends Component {
           pageOnChange={this.handlePageChange}
           customPageNumber={this.state.currentPage}
         >
-          <HomeSection currentPage={this.state.currentPage} language={this.state.currentLanguage} />
-          <SeasonsSection currentSection={this.state.seasonsSection} currentPage={this.state.currentPage} language={this.state.currentLanguage} />
-          <CollectionsSection currentPage={this.state.currentPage} language={this.state.currentLanguage} />
-          <ContactSection currentPage={this.state.currentPage} language={this.state.currentLanguage} />
+          <HomeSection season={this.state.seasonsSection} currentPage={this.state.currentPage} language={this.state.currentLanguage} />
+          <SeasonsSection season={this.state.seasonsSection}  currentSection={this.state.seasonsSection} currentPage={this.state.currentPage} language={this.state.currentLanguage} />
+          <CollectionsSection season={this.state.seasonsSection}  currentPage={this.state.currentPage} language={this.state.currentLanguage} />
+          <ContactSection season={this.state.seasonsSection}  currentPage={this.state.currentPage} language={this.state.currentLanguage} />
         </ReactPageScroller>
       </>
     )

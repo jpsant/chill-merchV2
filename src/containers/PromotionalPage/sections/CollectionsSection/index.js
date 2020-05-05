@@ -6,7 +6,14 @@ import 'react-multi-carousel/lib/styles.css';
 
 import Card from '../../components/CollectionCard';
 
-export default function CollectionstSection() {
+import image1 from '../../../../assets/images/card-1.png';
+import image2 from '../../../../assets/images/card-2.png';
+import image3 from '../../../../assets/images/card-3.png';
+import image4 from '../../../../assets/images/card-4.png';
+import image5 from '../../../../assets/images/card-5.png';
+import image6 from '../../../../assets/images/card-6.png';
+
+export default function CollectionstSection({ season }) {
 
   const responsive = {
     desktop: {
@@ -36,11 +43,16 @@ export default function CollectionstSection() {
   }
 
   return (
-    <div className="collectionsSectionContainer">
+    <div className="collectionsSectionContainer"
+      style={{
+        background: season === 0 ? "#6291AF" :
+          season === 1 ? "#D46B7A" :
+            season === 2 ? "#EA8C5C" :
+              season === 3 ? "#E9C02E" : "#6291AF"
+      }}>
       <h1 className="collectionsSectionContainer-h1">Unlimited Collections</h1>
       <Carousel
         partialVisible={true}
-        additionalTransfrom={0}
         arrows
         autoPlay={true}
         autoPlaySpeed={3000}
@@ -55,12 +67,14 @@ export default function CollectionstSection() {
         responsive={responsive}
         showDots={false}
         swipeable
-        transitionDuration={500}
+        transitionDuration={600}
       >
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card title="Casual Choice" BGColor="#114566" image={image1} />
+        <Card title="Sunday Morning" BGColor="#954930" image={image2} />
+        <Card title="Morning Wakeup" BGColor="#254F55" image={image3} />
+        <Card title="Workout Time!" BGColor="#273944" image={image4} />
+        <Card title="Winter Collection" BGColor="#327773" image={image5} />
+        <Card title="Player 1 Start!" BGColor="#9B041F" image={image6} />
       </Carousel>
     </div>
   )

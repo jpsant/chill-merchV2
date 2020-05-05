@@ -24,10 +24,10 @@ export default function SectionsManager({ currentPage, changeSection, currentSec
         <img src={LeftBG} alt="bottom left button background" />
         <button onClick={() => changeSection(-1)}
           className="left-button-container__button">
-          <img src={currentSection === 0 ? LeftWinter : 
-          currentSection === 1 ? LeftSpring : 
-          currentSection === 2 ? LeftAutumn : 
-          currentSection === 3 ? LeftSummer : null} alt="left button" />
+          <img src={currentSection === 0 ? LeftWinter :
+            currentSection === 1 ? LeftSpring :
+              currentSection === 2 ? LeftAutumn :
+                currentSection === 3 ? LeftSummer : null} alt="left button" />
         </button>
       </div>
       <div className="right-button-container" style={{
@@ -37,10 +37,11 @@ export default function SectionsManager({ currentPage, changeSection, currentSec
         <img src={RightBG} alt="bottom right button background" />
         <button onClick={() => changeSection(+1)}
           className="right-button-container__button">
-          <img src={currentSection === 0 ? RightWinter : 
-          currentSection === 1 ? RightSpring : 
-          currentSection === 2 ? RightAutumn : 
-          currentSection === 3 ? RightSummer : null} alt="right button" />
+          <img src={
+            currentSection === 0 ? RightWinter :
+              currentSection === 1 ? RightSpring :
+                currentSection === 2 ? RightAutumn :
+                  currentSection === 3 ? RightSummer : null} alt="right button" />
         </button>
       </div>
     </>
