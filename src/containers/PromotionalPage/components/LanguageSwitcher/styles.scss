@@ -17,5 +17,37 @@
     z-index: 99;
     width: 86px;
     cursor: pointer;
+    transition: transform .3s cubic-bezier(.175,.885,.32,1.275),-webkit-transform .3s cubic-bezier(.175,.885,.32,1.275);
+  }
+
+  &-languageSwitcherFlag:hover {
+    transform: rotate(15deg);
+  }
+
+  &__modal {
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    right: 200px;
+    top: 24px;
+    position: fixed;
+    width: 240px;
+    height: 60px;
+    z-index: 999;
+    transition: all .4s;
+    box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+    
+    &-brazil {
+      margin-right: 50px;
+      width: 60px;
+      cursor: pointer;
+    }
+
+    &-eua {
+      width: 60px;
+      cursor: pointer;
+    }
   }
 }

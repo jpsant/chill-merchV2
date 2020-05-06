@@ -5,12 +5,12 @@ import Heart from '../../../../assets/svgs/heart.svg';
 import Rating from '../../../../assets/svgs/rating.svg';
 import Details from '../../../../assets/svgs/details.svg';
 
-export default function Card({ image, BGColor, title, liked, rating, alt }) {
+export default function Card({ image, BGColor, title, liked, rating, alt, language }) {
   return (
     <div className="CollectionCard-container" style={{ backgroundColor: BGColor }}>
       <img className="CollectionCard-container__image" src={image} alt={alt} />
       <div className="CollectionCard-container__texts">
-        <h1>{title}</h1>
+        <h1 style={{fontSize: language === 'portuguese' ? '31px' : '32px'}}>{title}</h1>
         <h2>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </h2>
