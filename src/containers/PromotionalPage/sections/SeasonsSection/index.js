@@ -10,25 +10,49 @@ import Sun from '../../../../assets/svgs/sun.svg'
 import WinterImage1 from '../../../../assets/images/winter-1.png';
 import WinterImage2 from '../../../../assets/images/winter-2.png';
 
+import SpringImage1 from '../../../../assets/images/spring-1.png';
+import SpringImage2 from '../../../../assets/images/spring-2.png';
+
+import AutumnImage1 from '../../../../assets/images/autumn-1.png';
+import AutumnImage2 from '../../../../assets/images/autumn-2.png';
+
+import SummerImage1 from '../../../../assets/images/summer-1.png';
+import SummerImage2 from '../../../../assets/images/summer-2.png';
+
+
 export default function SeasonsSection({ currentPage, currentSection, language }) {
 
   const winter = (
     <div className="seasonSectionContainer__winter">
       <div className="seasonSectionContainer__winter-titleContainer">
         <div className="seasonSectionContainer__winter-titleContainer-text">
-          <h1>{language === 'english' ? 'Winter' : 'Inverno'}</h1>
-          <h2>{language === 'english' ? 'Say Hello to the cold days!' : 'Diga Olá para os dias frios!'}</h2>
+          <h1 className={currentPage === 1 && currentSection === 0 ? 'winter-text-1-in' : 'winter-text-out'}>
+            {language === 'english' ? 'Winter' : 'Inverno'}
+          </h1>
+          <h2 className={currentPage === 1 && currentSection === 0 ? 'winter-text-2-in' : 'winter-text-out'}>
+            {language === 'english' ? 'Say Hello to the cold days!' : 'Diga Olá para os dias frios!'}
+          </h2>
         </div>
-        <img className="seasonSectionContainer__winter-titleContainer-snow-flake" src={Snow} alt="Snow Flake" />
+        <img className={currentPage === 1 && currentSection === 0 ?
+          'seasonSectionContainer__winter-titleContainer-snow-flake winter-logo-in' :
+          'seasonSectionContainer__winter-titleContainer-snow-flake winter-logo-out'} src={Snow} alt="Snow Flake" />
       </div>
       <div className="seasonSectionContainer__winter-imageContainer">
-        <img className="seasonSectionContainer__winter-imageContainer__image1" src={WinterImage1} alt="Winter 1" />
-        <div className="seasonSectionContainer__winter-imageContainer__text1">
+        <img className={currentPage === 1 && currentSection === 0 ?
+          'seasonSectionContainer__winter-imageContainer__image1 winter-image-1-in' :
+          'seasonSectionContainer__winter-imageContainer__image1 winter-image-1-out'} src={WinterImage1} alt="Winter 1" />
+        <div className={currentPage === 1 && currentSection === 0 ?
+          'seasonSectionContainer__winter-imageContainer__text1 winter-image-text-1-in' :
+          'seasonSectionContainer__winter-imageContainer__text1 winter-text-out'}>
           <h1>Lorem Ipsum</h1>
           <h2>example lotem damet asbterco limtel. </h2>
         </div>
-        <img className="seasonSectionContainer__winter-imageContainer__image2" src={WinterImage2} alt="Winter 2" />
-        <div className="seasonSectionContainer__winter-imageContainer__text2">
+        <img className={currentPage === 1 && currentSection === 0 ?
+          'seasonSectionContainer__winter-imageContainer__image2 winter-image-2-in' :
+          'seasonSectionContainer__winter-imageContainer__image2 winter-image-2-out'} src={WinterImage2} alt="Winter 2" />
+        <div className={currentPage === 1 && currentSection === 0 ?
+          'seasonSectionContainer__winter-imageContainer__text2 winter-image-text-1-in' :
+          'seasonSectionContainer__winter-imageContainer__text2 winter-text-out'}>
           <h1>Lorem Ipsum</h1>
           <h2>example lotem damet asbterco limtel. </h2>
         </div>
@@ -40,18 +64,28 @@ export default function SeasonsSection({ currentPage, currentSection, language }
     <div className="seasonSectionContainer__spring">
       <div className="seasonSectionContainer__spring-titleContainer">
         <div className="seasonSectionContainer__spring-titleContainer-text">
-          <h1>{language === 'english' ? 'Spring' : 'Primavera'}</h1>
-          <h2>{language === 'english' ? 'The Love grows here!' : 'Onde o amor começa a florescer!'}</h2>
+          <h1 className={currentPage === 1 && currentSection === 1 ? 'winter-text-1-in' : 'winter-text-out'}>
+            {language === 'english' ? 'Spring' : 'Primavera'}
+          </h1>
+          <h2 className={currentPage === 1 && currentSection === 1 ? 'winter-text-2-in' : 'winter-text-out'}>
+            {language === 'english' ? 'The Love grows here!' : 'Onde o amor começa a florescer!'}
+          </h2>
         </div>
-        <img className="seasonSectionContainer__spring-titleContainer-snow-flake" src={SpringFlower} alt="Spring Flower" />
+        <img className={currentPage === 1 && currentSection === 1 ?
+          'seasonSectionContainer__winter-titleContainer-snow-flake winter-logo-in' :
+          'seasonSectionContainer__winter-titleContainer-snow-flake winter-logo-out'} src={SpringFlower} alt="Spring Flower" />
       </div>
       <div className="seasonSectionContainer__spring-imageContainer">
-        <img className="seasonSectionContainer__spring-imageContainer__image1" src={WinterImage1} alt="Winter 1" />
+        <img className={currentPage === 1 && currentSection === 1 ?
+          'seasonSectionContainer__spring-imageContainer__image1 winter-image-2-in' :
+          'seasonSectionContainer__spring-imageContainer__image1 winter-image-2-out'} src={SpringImage1} alt="Spring Merch 1" />
         <div className="seasonSectionContainer__spring-imageContainer__text1">
           <h1>Lorem Ipsum</h1>
           <h2>example lotem damet asbterco limtel. </h2>
         </div>
-        <img className="seasonSectionContainer__spring-imageContainer__image2" src={WinterImage2} alt="Winter 2" />
+        <img className={currentPage === 1 && currentSection === 1 ?
+          'seasonSectionContainer__spring-imageContainer__image2 winter-image-1-in' :
+          'seasonSectionContainer__spring-imageContainer__image2 winter-image-1-out'} src={SpringImage2} alt="Spring Merch 2" />
         <div className="seasonSectionContainer__spring-imageContainer__text2">
           <h1>Lorem Ipsum</h1>
           <h2>example lotem damet asbterco limtel. </h2>
@@ -61,46 +95,46 @@ export default function SeasonsSection({ currentPage, currentSection, language }
   );
 
   const autumn = (
-    <div className="seasonSectionContainer__winter">
-      <div className="seasonSectionContainer__winter-titleContainer">
-        <div className="seasonSectionContainer__winter-titleContainer-text">
+    <div className="seasonSectionContainer__autumn">
+      <div className="seasonSectionContainer__autumn-titleContainer">
+        <div className="seasonSectionContainer__autumn-titleContainer-text">
           <h1>{language === 'english' ? 'Autumn' : 'Outono'}</h1>
           <h2>{language === 'english' ? 'The Season to fall in Love.' : 'A Estação para cair de amores.'}</h2>
         </div>
-        <img className="seasonSectionContainer__winter-titleContainer-snow-flake" src={AutumnLeaf} alt="Autumn Leaf" />
+        <img className="seasonSectionContainer__autumn-titleContainer-snow-flake" src={AutumnLeaf} alt="Autumn Leaf" />
       </div>
-      <div className="seasonSectionContainer__winter-imageContainer">
-        <img className="seasonSectionContainer__winter-imageContainer__image1" src={WinterImage1} alt="Winter 1" />
-        <div className="seasonSectionContainer__winter-imageContainer__text1">
-          <h1>Lorem Ipsum</h1>
-          <h2>example lotem damet asbterco limtel. </h2>
+      <div className="seasonSectionContainer__autumn-imageContainer">
+        <img className="seasonSectionContainer__autumn-imageContainer__image1" src={AutumnImage1} alt="autumn 1" />
+        <div className="seasonSectionContainer__autumn-imageContainer__text1">
+          <h1>Lorem Ipsum Damet</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h2>
         </div>
-        <img className="seasonSectionContainer__winter-imageContainer__image2" src={WinterImage2} alt="Winter 2" />
-        <div className="seasonSectionContainer__winter-imageContainer__text2">
-          <h1>Lorem Ipsum</h1>
-          <h2>example lotem damet asbterco limtel. </h2>
+        <img className="seasonSectionContainer__autumn-imageContainer__image2" src={AutumnImage2} alt="autumn 2" />
+        <div className="seasonSectionContainer__autumn-imageContainer__text2">
+          <h1>Lorem Ipsum Damet</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h2>
         </div>
       </div>
     </div>
   );
 
   const summer = (
-    <div className="seasonSectionContainer__winter">
-      <div className="seasonSectionContainer__winter-titleContainer">
-        <div className="seasonSectionContainer__winter-titleContainer-text">
+    <div className="seasonSectionContainer__summer">
+      <div className="seasonSectionContainer__summer-titleContainer">
+        <div className="seasonSectionContainer__summer-titleContainer-text">
           <h1>{language === 'english' ? 'Summer' : 'Verão'}</h1>
           <h2>{language === 'english' ? 'Beach Time!!' : 'Hora da Praia!!'}</h2>
         </div>
-        <img className="seasonSectionContainer__winter-titleContainer-snow-flake" src={Sun} alt="Sun" />
+        <img className="seasonSectionContainer__summer-titleContainer-snow-flake" src={Sun} alt="Sun" />
       </div>
-      <div className="seasonSectionContainer__winter-imageContainer">
-        <img className="seasonSectionContainer__winter-imageContainer__image1" src={WinterImage1} alt="Winter 1" />
-        <div className="seasonSectionContainer__winter-imageContainer__text1">
+      <div className="seasonSectionContainer__summer-imageContainer">
+        <img className="seasonSectionContainer__summer-imageContainer__image1" src={SummerImage1} alt="summer 1" />
+        <div className="seasonSectionContainer__summer-imageContainer__text1">
           <h1>Lorem Ipsum</h1>
           <h2>example lotem damet asbterco limtel. </h2>
         </div>
-        <img className="seasonSectionContainer__winter-imageContainer__image2" src={WinterImage2} alt="Winter 2" />
-        <div className="seasonSectionContainer__winter-imageContainer__text2">
+        <img className="seasonSectionContainer__summer-imageContainer__image2" src={SummerImage2} alt="summer 2" />
+        <div className="seasonSectionContainer__summer-imageContainer__text2">
           <h1>Lorem Ipsum</h1>
           <h2>example lotem damet asbterco limtel. </h2>
         </div>

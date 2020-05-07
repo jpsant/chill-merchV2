@@ -1,11 +1,11 @@
-@import '../../../../mixins/mixins.scss';
+@import "../../../../mixins/mixins.scss";
 
 .seasonSectionContainer {
   height: 100vh;
   background: #6291af;
   position: relative;
   color: white;
-  transition: background .4s;
+  transition: background 0.4s;
 
   &__bearLogo {
     z-index: 999;
@@ -19,21 +19,23 @@
     align-items: center;
     justify-content: center;
     transform: translateX(64px);
-    transition: all .5s;
+    transition: all 0.5s;
 
     &-titleContainer {
       display: flex;
       position: absolute;
-      left: 32px;
-      top: 50%;
+      left: -2%;
+      top: 40%;
       transform: translateY(-50%);
 
       &-text {
         h1 {
-          font-family: 'Lobster Regular';
+          font-family: "Lobster Regular";
           font-weight: 400;
           font-size: 102px;
           margin: 0;
+          transform: translateX(-40%);
+          opacity: 0;
         }
 
         h2 {
@@ -42,12 +44,16 @@
           margin-top: 0;
           font-size: 30px;
           width: 272px;
+          transform: translateX(-40%);
+          opacity: 0;
         }
       }
 
       &-snow-flake {
         width: 120px;
         margin: 0 16px;
+        transform: translateY(-35%);
+        opacity: 0;
       }
     }
 
@@ -60,15 +66,17 @@
       &__image1 {
         z-index: 999;
         position: absolute;
-        top: 64px;
-        box-shadow: 4px 4px 22px rgba(0,0,0,.4);
+        top: 0;
+        opacity: 0;
+        box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
       }
 
       &__image2 {
         position: absolute;
         transform: translateX(85%);
-        bottom: 64px;
-        box-shadow: 4px 4px 22px rgba(0,0,0,.4);
+        bottom: 0;
+        opacity: 0;
+        box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
       }
 
       &__text1 {
@@ -80,15 +88,17 @@
         flex-direction: column;
         bottom: 50px;
         z-index: 99996;
+        transform: translateX(-25%);
+        opacity: 0;
 
         h1 {
           margin: 0;
-          font-family: 'Roboto Regular';
+          font-family: "Roboto Regular";
           font-size: 38px;
         }
 
         h2 {
-          font-family: 'Roboto Light';
+          font-family: "Roboto Light";
           margin: 0;
           font-size: 16px;
           opacity: 70%;
@@ -105,15 +115,17 @@
         align-self: center !important;
         justify-self: flex-start !important;
         flex-direction: column;
+        transform: translateX(25%);
+        opacity: 0;
 
         h1 {
           margin: 0;
-          font-family: 'Roboto Regular';
+          font-family: "Roboto Regular";
           font-size: 38px;
         }
 
         h2 {
-          font-family: 'Roboto Light';
+          font-family: "Roboto Light";
           margin: 0;
           font-size: 16px;
           opacity: 70%;
@@ -129,18 +141,137 @@
     align-items: center;
     justify-content: center;
     transform: translateX(64px);
-    transition: all .5s;
+    transition: all 0.5s;
 
     &-titleContainer {
       display: flex;
       position: absolute;
-      left: 32px;
-      top: 50%;
+      left: -2%;
+      top: 40%;
       transform: translateY(-50%);
 
       &-text {
         h1 {
-          font-family: 'Lobster Regular';
+          font-family: "Lobster Regular";
+          font-weight: 400;
+          font-size: 102px;
+          margin: 0;
+          transform: translateX(-40%);
+          opacity: 0;
+        }
+
+        h2 {
+          text-align: center;
+          font-weight: 400;
+          margin-top: 0;
+          font-size: 30px;
+          width: 272px;
+          transform: translateX(-40%);
+          opacity: 0;
+        }
+      }
+
+      &-snow-flake {
+        width: 120px;
+        margin: 0 16px;
+      }
+    }
+
+    &-imageContainer {
+      display: grid;
+      position: relative;
+      width: 594px;
+      height: 100vh;
+
+      &__image1 {
+        z-index: 999;
+        position: absolute;
+        bottom: 0px;
+        opacity: 0;
+        box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+      }
+
+      &__image2 {
+        position: absolute;
+        transform: translateX(75%);
+        top: 0px;
+        opacity: 0;
+        box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+      }
+
+      &__text1 {
+        text-align: left;
+        position: relative;
+        display: flex;
+        align-self: center;
+        justify-self: flex-start;
+        flex-direction: column;
+        top: 30px;
+        left: 50px;
+        z-index: 99996;
+
+        h1 {
+          margin: 0;
+          font-family: "Roboto Regular";
+          font-size: 38px;
+        }
+
+        h2 {
+          font-family: "Roboto Light";
+          margin: 0;
+          font-size: 16px;
+          opacity: 70%;
+          font-weight: 200px;
+          width: 225px;
+        }
+      }
+
+      &__text2 {
+        text-align: right;
+        position: relative;
+        display: flex;
+        bottom: 0px;
+        left: 240px;
+        align-self: center !important;
+        justify-self: flex-end !important;
+        flex-direction: column;
+        z-index: 999;
+
+        h1 {
+          margin: 0;
+          font-family: "Roboto Regular";
+          font-size: 38px;
+        }
+
+        h2 {
+          font-family: "Roboto Light";
+          margin: 0;
+          font-size: 16px;
+          opacity: 70%;
+          font-weight: 200px;
+          width: 225px;
+        }
+      }
+    }
+  }
+
+  &__autumn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(74px);
+    transition: all 0.5s;
+
+    &-titleContainer {
+      display: flex;
+      position: absolute;
+      left: -2%;
+      top: 40%;
+      transform: translateY(-50%);
+
+      &-text {
+        h1 {
+          font-family: "Lobster Regular";
           font-weight: 400;
           font-size: 102px;
           margin: 0;
@@ -168,42 +299,45 @@
       height: 100vh;
 
       &__image1 {
-        z-index: 999;
         position: absolute;
-        top: 64px;
-        box-shadow: 4px 4px 22px rgba(0,0,0,.4);
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: 64px;
+        box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
       }
 
       &__image2 {
+        z-index: 999;
         position: absolute;
-        transform: translateX(85%);
-        bottom: 64px;
-        box-shadow: 4px 4px 22px rgba(0,0,0,.4);
+        transform: translate(125%, -50%);
+        top: 50%;
+        box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
       }
 
       &__text1 {
-        text-align: right;
+        text-align: left;
         position: relative;
         display: flex;
         align-self: center;
-        justify-self: flex-end;
+        justify-self: flex-start;
         flex-direction: column;
-        bottom: 50px;
+        top: -20px;
+        left: 10px;
         z-index: 99996;
 
         h1 {
           margin: 0;
-          font-family: 'Roboto Regular';
+          font-family: "Roboto Regular";
           font-size: 38px;
         }
 
         h2 {
-          font-family: 'Roboto Light';
+          font-family: "Roboto Light";
           margin: 0;
           font-size: 16px;
           opacity: 70%;
           font-weight: 200px;
-          width: 225px;
+          width: 360px;
         }
       }
 
@@ -211,26 +345,244 @@
         text-align: left;
         position: relative;
         display: flex;
-        top: 50px;
+        bottom: -20px;
+        left: 10px;
         align-self: center !important;
         justify-self: flex-start !important;
         flex-direction: column;
+        z-index: 999;
 
         h1 {
           margin: 0;
-          font-family: 'Roboto Regular';
+          font-family: "Roboto Regular";
           font-size: 38px;
         }
 
         h2 {
-          font-family: 'Roboto Light';
+          font-family: "Roboto Light";
           margin: 0;
           font-size: 16px;
           opacity: 70%;
           font-weight: 200px;
-          width: 225px;
+          width: 360px;
         }
       }
     }
+  }
+
+  &__summer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(74px);
+    transition: all 0.5s;
+
+    &-titleContainer {
+      display: flex;
+      position: absolute;
+      left: -2%;
+      top: 40%;
+      transform: translateY(-50%);
+
+      &-text {
+        h1 {
+          font-family: "Lobster Regular";
+          font-weight: 400;
+          font-size: 102px;
+          margin: 0;
+        }
+
+        h2 {
+          text-align: center;
+          font-weight: 400;
+          margin-top: 0;
+          font-size: 30px;
+          width: 272px;
+        }
+      }
+
+      &-snow-flake {
+        width: 120px;
+        margin: 0 16px;
+      }
+    }
+
+    &-imageContainer {
+      display: grid;
+      position: relative;
+      width: 661px;
+      height: 100vh;
+
+      &__image1 {
+        align-self: flex-start;
+        position: absolute;
+        transform: translateX(10%);
+        top: 64px;
+        box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+      }
+
+      &__image2 {
+        z-index: 999;
+        position: absolute;
+        transform: translate(125%, -50%);
+        top: 60%;
+        bottom: 64px;
+        box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+      }
+
+      &__text1 {
+        text-align: right;
+        position: relative;
+        display: flex;
+        align-self: flex-start;
+        justify-self: flex-end;
+        flex-direction: column;
+        top: 72px;
+        width: 225px;
+
+        h1 {
+          margin: 0;
+          font-family: "Roboto Regular";
+          font-size: 38px;
+        }
+
+        h2 {
+          font-family: "Roboto Light";
+          margin: 0;
+          font-size: 16px;
+          opacity: 70%;
+          font-weight: 200px;
+        }
+      }
+
+      &__text2 {
+        text-align: left;
+        position: relative;
+        display: flex;
+        left: 10px;
+        align-self: center !important;
+        justify-self: flex-start !important;
+        flex-direction: column;
+        width: 225px;
+        justify-content: center;
+        transform: translateX(20%);
+        top: 64px;
+
+        h1 {
+          margin: 0;
+          font-family: "Roboto Regular";
+          font-size: 38px;
+        }
+
+        h2 {
+          font-family: "Roboto Light";
+          margin: 0;
+          font-size: 16px;
+          opacity: 70%;
+          font-weight: 200px;
+        }
+      }
+    }
+  }
+}
+
+
+// SEASONS SECTIONS ANIMATION CLASSES.
+
+.winter-text-1-in {
+  animation: winterTextAnimationIn .8s ease-in-out .2s forwards;
+}
+
+.winter-text-2-in {
+  animation: winterTextAnimationIn .8s ease-in-out .4s forwards;
+}
+
+.winter-image-text-1-in {
+  animation: winterTextAnimationIn .8s ease-in-out .6s forwards;
+}
+
+.winter-logo-in {
+  animation: winterLogoIn .8s ease-in-out .3s forwards;
+}
+
+.winter-image-1-in {
+  animation: winterImage1In .6s ease-in-out .3s forwards;
+}
+
+.winter-image-2-in {
+  animation: winterImage2In .6s ease-in-out .3s forwards;
+}
+
+.winter-logo-out {
+  animation: winterLogoOut .3s forwards;
+}
+
+.winter-text-out {
+  animation: winterTextAnimationOut .3s forwards;
+}
+
+.winter-image-1-out {
+  animation: winterImage1Out .3s forwards;
+}
+
+.winter-image-2-out {
+  animation: winterImage2Out .3s forwards;
+}
+
+//SEASONS SECTIONS ANIMATIONS KEYFRAMES
+
+@keyframes winterTextAnimationIn {
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes winterTextAnimationOut {
+  to {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+}
+
+@keyframes winterLogoIn {
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes winterLogoOut {
+  to {
+    transform: translateY(-35%);
+    opacity: 0;
+  }
+}
+
+@keyframes winterImage1In {
+  to {
+    top: 64px;
+    opacity: 1;
+  }
+}
+
+@keyframes winterImage1Out {
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes winterImage2In {
+  to {
+    bottom: 64px;
+    opacity: 1;
+  }
+}
+
+@keyframes winterImage2Out {
+  to {
+    bottom: 0;
+    opacity: 0;
   }
 }
