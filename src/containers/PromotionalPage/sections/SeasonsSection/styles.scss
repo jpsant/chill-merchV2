@@ -207,8 +207,9 @@
         justify-self: flex-start;
         flex-direction: column;
         top: 30px;
-        left: 50px;
+        right: -110px;
         z-index: 99996;
+        opacity: 0;
 
         h1 {
           margin: 0;
@@ -231,7 +232,8 @@
         position: relative;
         display: flex;
         bottom: 0px;
-        left: 240px;
+        opacity: 0;
+        left: 140px;
         align-self: center !important;
         justify-self: flex-end !important;
         flex-direction: column;
@@ -275,6 +277,8 @@
           font-weight: 400;
           font-size: 102px;
           margin: 0;
+          transform: translateX(-40%);
+          opacity: 0;
         }
 
         h2 {
@@ -283,6 +287,8 @@
           margin-top: 0;
           font-size: 30px;
           width: 272px;
+          transform: translateX(-40%);
+          opacity: 0;
         }
       }
 
@@ -303,6 +309,8 @@
         top: 50%;
         transform: translateY(-50%);
         bottom: 64px;
+        right: 10px;
+        opacity: 0;
         box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
       }
 
@@ -310,7 +318,8 @@
         z-index: 999;
         position: absolute;
         transform: translate(125%, -50%);
-        top: 50%;
+        top: 35%;
+        opacity: 0;
         box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
       }
 
@@ -321,7 +330,8 @@
         align-self: center;
         justify-self: flex-start;
         flex-direction: column;
-        top: -20px;
+        top: 40px;
+        opacity: 0;
         left: 10px;
         z-index: 99996;
 
@@ -345,7 +355,9 @@
         text-align: left;
         position: relative;
         display: flex;
-        bottom: -20px;
+        /* bottom: -20px; */
+        bottom: 40px;
+        opacity: 0;
         left: 10px;
         align-self: center !important;
         justify-self: flex-start !important;
@@ -390,6 +402,8 @@
           font-weight: 400;
           font-size: 102px;
           margin: 0;
+          transform: translateX(-40%);
+          opacity: 0;
         }
 
         h2 {
@@ -398,6 +412,8 @@
           margin-top: 0;
           font-size: 30px;
           width: 272px;
+          transform: translateX(-40%);
+          opacity: 0;
         }
       }
 
@@ -417,17 +433,18 @@
         align-self: flex-start;
         position: absolute;
         transform: translateX(10%);
-        top: 64px;
         box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+        top: -20%;
+        opacity: 0;
       }
 
       &__image2 {
         z-index: 999;
         position: absolute;
         transform: translate(125%, -50%);
-        top: 60%;
-        bottom: 64px;
         box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+        top: 80%;
+        opacity: 0;
       }
 
       &__text1 {
@@ -439,6 +456,8 @@
         flex-direction: column;
         top: 72px;
         width: 225px;
+        transform: translateX(-35%);
+        opacity: 0;
 
         h1 {
           margin: 0;
@@ -465,7 +484,8 @@
         flex-direction: column;
         width: 225px;
         justify-content: center;
-        transform: translateX(20%);
+        transform: translateX(70%);
+        opacity: 0;
         top: 64px;
 
         h1 {
@@ -486,47 +506,166 @@
   }
 }
 
-
 // SEASONS SECTIONS ANIMATION CLASSES.
 
 .winter-text-1-in {
-  animation: winterTextAnimationIn .8s ease-in-out .2s forwards;
+  animation: winterTextAnimationIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
 }
 
 .winter-text-2-in {
-  animation: winterTextAnimationIn .8s ease-in-out .4s forwards;
+  animation: winterTextAnimationIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
 }
 
 .winter-image-text-1-in {
-  animation: winterTextAnimationIn .8s ease-in-out .6s forwards;
+  animation: winterTextAnimationIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
 }
 
 .winter-logo-in {
-  animation: winterLogoIn .8s ease-in-out .3s forwards;
+  animation: winterLogoIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
 }
 
 .winter-image-1-in {
-  animation: winterImage1In .6s ease-in-out .3s forwards;
+  animation: winterImage1In 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
 }
 
 .winter-image-2-in {
-  animation: winterImage2In .6s ease-in-out .3s forwards;
+  animation: winterImage2In 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
 }
 
 .winter-logo-out {
-  animation: winterLogoOut .3s forwards;
+  animation: winterLogoOut 0.3s forwards;
 }
 
 .winter-text-out {
-  animation: winterTextAnimationOut .3s forwards;
+  animation: winterTextAnimationOut 0.3s forwards;
 }
 
 .winter-image-1-out {
-  animation: winterImage1Out .3s forwards;
+  animation: winterImage1Out 0.3s forwards;
 }
 
 .winter-image-2-out {
-  animation: winterImage2Out .3s forwards;
+  animation: winterImage2Out 0.3s forwards;
+}
+
+//SPRING ANIMATIONS START!
+
+.spring-image-text-1-in {
+  animation: SpringImageText1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.spring-image-text-2-in {
+  animation: SpringImageText2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+@keyframes SpringImageText1In {
+  to {
+    right: -45px;
+    opacity: 1;
+  }
+}
+
+@keyframes SpringImageText2In {
+  to {
+    left: 240px;
+    opacity: 1;
+  }
+}
+
+//SPRING ANIMATIONS ENDS
+
+//AUTUMN ANIMATIONS STARTS
+
+.autumn-image-1-in {
+  animation: AutumnImageAnimation1In 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.autumn-image-2-in {
+  animation: AutumnImageAnimation2In 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+@keyframes AutumnImageAnimation1In {
+  to {
+    right: 65px;
+    opacity: 1;
+  }
+}
+
+@keyframes AutumnImageAnimation2In {
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+.autumn-image-text-1-in {
+  animation: AutumnImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+}
+
+.autumn-image-text-2-in {
+  animation: AutumnImageTextAnimation2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+}
+
+@keyframes AutumnImageTextAnimation1In {
+  to {
+    top: -20px;
+    opacity: 1;
+  }
+}
+
+@keyframes AutumnImageTextAnimation2In {
+  to {
+    bottom: -20px;
+    opacity: 1;
+  }
+}
+
+//AUTUMN ANIMATIONS ENDS
+
+//SUMMER ANIMATIONS STARTS
+
+.summer-image-1-in {
+  animation: summerImageAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.summer-image-2-in {
+  animation: summerImageAnimation2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+@keyframes summerImageAnimation1In {
+  to {
+    top: 64px;
+    opacity: 1;
+  }
+}
+
+@keyframes summerImageAnimation2In {
+  to {
+    top: 60%;
+    opacity: 1;
+  }
+}
+
+.summer-text-image-1-in {
+  animation: summerImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+}
+
+.summer-text-image-2-in {
+  animation: summerImageTextAnimation2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+}
+
+@keyframes summerImageTextAnimation1In {
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes summerImageTextAnimation2In {
+  to {
+    transform: translateX(20%);
+    opacity: 1;
+  }
 }
 
 //SEASONS SECTIONS ANIMATIONS KEYFRAMES
