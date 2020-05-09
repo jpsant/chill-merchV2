@@ -58,15 +58,13 @@ export default function CollectionstSection({ season, language }) {
         autoPlaySpeed={3000}
         className="collectionsSectionContainer__carousel"
         containerClass="container-with-dots"
-        draggable
-        focusOnSelect={true}
+        focusOnSelect={false}
         infinite
         itemClass="carousel-item"
         keyBoardControl
         minimumTouchDrag={80}
         responsive={responsive}
         showDots={false}
-        swipeable
         transitionDuration={600}
       >
         <Card language={language} title={language === 'english' ? 'Casual Choise' : 'Escolha Casual'} BGColor="#114566" image={image1} />

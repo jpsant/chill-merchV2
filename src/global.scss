@@ -35,5 +35,64 @@ body {
 }
 .fade-enter-active,
 .fade-exit-active {
-  transition: opacity 500ms, transform 500ms;
+  transition: opacity 500ms;
+}
+
+.logo-text-1-in {
+  transform: translateX(-40%);
+  opacity: 0;
+  animation: logoTextAnimationIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+}
+
+.logo-text-2-in {
+  transform: translateX(-40%);
+  opacity: 0;
+  animation: logoTextAnimationIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+}
+
+.logo-text-out {
+  transform: translateY(0%);
+  opacity: 1;
+  animation: logoTextAnimationOut 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.logo-in {
+  transform: translateY(-35%);
+  opacity: 0;
+  animation: logoIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.logo-out {
+  transform: translateY(0%);
+  opacity: 1;
+  animation: logoOut 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+@keyframes logoTextAnimationIn {
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes logoTextAnimationOut {
+  to {
+    transform: translateY(-80%);
+    opacity: 0;
+  }
+}
+
+@keyframes logoIn {
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes logoOut {
+  to {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
 }

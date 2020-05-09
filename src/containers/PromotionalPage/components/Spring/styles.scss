@@ -1,0 +1,226 @@
+.spring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(64px);
+  transition: all 0.5s;
+
+  &-titleContainer {
+    display: flex;
+    position: absolute;
+    left: -2%;
+    top: 40%;
+    transform: translateY(-50%);
+
+    &-text {
+      &-h1 {
+        font-family: "Lobster Regular";
+        font-weight: 400;
+        font-size: 102px;
+        margin: 0;
+        transform: translateX(-40%);
+        transform: translateY(0%);
+        opacity: 0;
+      }
+
+      &-h2 {
+        text-align: center;
+        font-weight: 400;
+        margin-top: 0;
+        font-size: 30px;
+        width: 272px;
+        transform: translateX(-40%);
+        transform: translateY(0%);
+        opacity: 0;
+      }
+    }
+
+    &-spring-leaf {
+      width: 120px;
+      margin: 0 16px;
+    }
+  }
+
+  &-imageContainer {
+    display: grid;
+    position: relative;
+    width: 594px;
+    height: 100vh;
+
+    &__image1 {
+      z-index: 999;
+      position: absolute;
+      bottom: 0px;
+      opacity: 0;
+      box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+    }
+
+    &__image2 {
+      position: absolute;
+      transform: translateX(75%);
+      top: 0px;
+      opacity: 1;
+      box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+    }
+
+    &__text1 {
+      text-align: left;
+      position: relative;
+      display: flex;
+      align-self: center;
+      justify-self: flex-start;
+      flex-direction: column;
+      top: 30px;
+      right: -160px;
+      z-index: 99996;
+      opacity: 0;
+
+      h1 {
+        margin: 0;
+        font-family: "Roboto Regular";
+        font-size: 38px;
+      }
+
+      h2 {
+        font-family: "Roboto Light";
+        margin: 0;
+        font-size: 16px;
+        opacity: 70%;
+        font-weight: 200px;
+        width: 225px;
+      }
+    }
+
+    &__text2 {
+      text-align: right;
+      position: relative;
+      display: flex;
+      bottom: 0px;
+      align-self: center !important;
+      justify-self: flex-end !important;
+      flex-direction: column;
+      z-index: 999;
+      left: 140px;
+      opacity: 0;
+
+      h1 {
+        margin: 0;
+        font-family: "Roboto Regular";
+        font-size: 38px;
+      }
+
+      h2 {
+        font-family: "Roboto Light";
+        margin: 0;
+        font-size: 16px;
+        opacity: 70%;
+        font-weight: 200px;
+        width: 225px;
+      }
+    }
+  }
+}
+
+.spring-image-text-1-in {
+  right: -160px;
+  opacity: 0;
+  animation: SpringImageText1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.spring-image-text-1-out {
+  right: -110px;
+  opacity: 1;
+  animation: SpringImageText1Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.spring-image-text-2-in {
+  left: 140px;
+  opacity: 0;
+  animation: SpringImageText2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.spring-image-text-2-out {
+  left: 240px;
+  opacity: 1;
+  animation: SpringImageText2Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes SpringImageText1In {
+  to {
+    right: -40px;
+    opacity: 1;
+  }
+}
+
+@keyframes SpringImageText1Out {
+  to {
+    right: -160px;
+    opacity: 0;
+  }
+}
+
+@keyframes SpringImageText2In {
+  to {
+    left: 240px;
+    opacity: 1;
+  }
+}
+
+@keyframes SpringImageText2Out {
+  to {
+    left: 140px;
+    opacity: 0;
+  }
+}
+
+.spring-image-1-in {
+  bottom: 0px;
+  opacity: 0;
+  animation: SpringImage1In 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.spring-image-1-out {
+  bottom: 64px;
+  opacity: 1;
+  animation: SpringImage1Out 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes SpringImage1In {
+  to {
+    bottom: 64px;
+    opacity: 1;
+  }
+}
+
+@keyframes SpringImage1Out {
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.spring-image-2-in {
+  top: 0px;
+  opacity: 0;
+  animation: SpringImage2In 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.spring-image-2-out {
+  top: 64px;
+  opacity: 1;
+  animation: SpringImage2Out 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes SpringImage2In {
+  to {
+    top: 64px;
+    opacity: 1;
+  }
+}
+
+@keyframes SpringImage2Out {
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}

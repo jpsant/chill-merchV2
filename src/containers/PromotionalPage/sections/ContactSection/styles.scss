@@ -22,11 +22,15 @@
       font-size: 100px;
       text-align: center;
       margin: 0;
+      transform: translateY(-50%);
+      opacity: 0;
     }
 
     &-logo {
       width: 174px;
       margin: 57px 0;
+      transform: translateY(-50%);
+      opacity: 0;
     }
 
     &-button {
@@ -57,6 +61,8 @@
     position: absolute;
     bottom: 32px;
     left: 32px;
+    transform: translateX(30%);
+    opacity: 0;
 
     h1 {
       font-size: 30px;
@@ -74,7 +80,7 @@
       &-instagram {
         width: 52px;
         opacity: 0.6;
-        transition: opacity .3s;
+        transition: opacity 0.3s;
       }
 
       &-instagram:hover {
@@ -84,7 +90,7 @@
       &-facebook {
         width: 52px;
         opacity: 0.6;
-        transition: opacity .3s;
+        transition: opacity 0.3s;
       }
 
       &-facebook:hover {
@@ -94,7 +100,7 @@
       &-twitter {
         width: 52px;
         opacity: 0.6;
-        transition: opacity .3s;
+        transition: opacity 0.3s;
       }
 
       &-twitter:hover {
@@ -104,7 +110,7 @@
       &-snapchat {
         width: 52px;
         opacity: 0.6;
-        transition: opacity .3s;
+        transition: opacity 0.3s;
       }
 
       &-snapchat:hover {
@@ -119,9 +125,11 @@
     position: absolute;
     bottom: 32px;
     right: 32px;
+    transform: translateX(-30%);
+    opacity: 0;
 
     h1 {
-      font-family: 'Roboto Regular';
+      font-family: "Roboto Regular";
       font-size: 30px;
       text-align: center;
     }
@@ -131,7 +139,7 @@
       align-items: center;
       justify-content: center;
 
-      input[type=text] {
+      input[type="text"] {
         width: 262px;
         height: 58px;
         border: none;
@@ -151,12 +159,115 @@
         height: 59px;
         cursor: pointer;
         filter: brightness(85%);
-        transition: filter .4s;
+        transition: filter 0.4s;
       }
 
       button:hover {
         filter: brightness(100%);
       }
     }
+  }
+}
+
+.contact-title-in {
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: ContactTitleIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.contact-title-out {
+  transform: translateY(0%);
+  opacity: 1;
+  animation: ContactTitleOut 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.contact-logo-in {
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: ContactTitleIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards;
+}
+
+.contact-logo-out {
+  transform: translateY(0%);
+  opacity: 1;
+  animation: ContactTitleOut 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.contact-button-in {
+  transform: translateX(50%);
+  opacity: 0;
+  animation: ContactButtonIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+}
+
+.social-media-in {
+  transform: translateX(30%);
+  opacity: 0;
+  animation: SocialMediaIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
+}
+
+.social-media-out {
+  transform: translateX(0%);
+  opacity: 1;
+  animation: SocialMediaOut 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.newsletter-in {
+  transform: translateX(-30%);
+  opacity: 0;
+  animation: NewsletterIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
+}
+
+.newsletter-out {
+  transform: translateX(0%);
+  opacity: 1;
+  animation: NewsletterOut 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes ContactTitleIn {
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes ContactTitleOut {
+  to {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}
+
+@keyframes ContactButtonIn {
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes SocialMediaIn {
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes SocialMediaOut {
+  to {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+}
+
+@keyframes NewsletterIn {
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes NewsletterOut {
+  to {
+    transform: translateX(-30%);
+    opacity: 0;
   }
 }

@@ -1,0 +1,227 @@
+.autumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(74px);
+  transition: all 0.5s;
+
+  &-titleContainer {
+    display: flex;
+    position: absolute;
+    left: -2%;
+    top: 40%;
+    transform: translateY(-50%);
+
+    &-text {
+      &-h1 {
+        font-family: "Lobster Regular";
+        font-weight: 400;
+        font-size: 102px;
+        margin: 0;
+        transform: translateX(-40%);
+        opacity: 0;
+      }
+
+      &-h2 {
+        text-align: center;
+        font-weight: 400;
+        margin-top: 0;
+        font-size: 30px;
+        width: 272px;
+        transform: translateX(-40%);
+        opacity: 0;
+      }
+    }
+
+    &-autumn-leaf {
+      width: 120px;
+      margin: 0 16px;
+    }
+  }
+
+  &-imageContainer {
+    display: grid;
+    position: relative;
+    width: 594px;
+    height: 100vh;
+
+    &__image1 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: 64px;
+      right: 10px;
+      opacity: 1;
+      box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+    }
+
+    &__image2 {
+      z-index: 999;
+      position: absolute;
+      transform: translate(125%, -50%);
+      top: 35%;
+      opacity: 0;
+      box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+    }
+
+    &__text1 {
+      text-align: left;
+      position: relative;
+      display: flex;
+      align-self: center;
+      justify-self: flex-start;
+      flex-direction: column;
+      top: 40px;
+      opacity: 0;
+      left: 10px;
+      z-index: 99996;
+
+      h1 {
+        margin: 0;
+        font-family: "Roboto Regular";
+        font-size: 38px;
+      }
+
+      h2 {
+        font-family: "Roboto Light";
+        margin: 0;
+        font-size: 16px;
+        opacity: 70%;
+        font-weight: 200px;
+        width: 360px;
+      }
+    }
+
+    &__text2 {
+      text-align: left;
+      position: relative;
+      display: flex;
+      bottom: 40px;
+      opacity: 0;
+      left: 10px;
+      align-self: center !important;
+      justify-self: flex-start !important;
+      flex-direction: column;
+      z-index: 999;
+
+      h1 {
+        margin: 0;
+        font-family: "Roboto Regular";
+        font-size: 38px;
+      }
+
+      h2 {
+        font-family: "Roboto Light";
+        margin: 0;
+        font-size: 16px;
+        opacity: 70%;
+        font-weight: 200px;
+        width: 360px;
+      }
+    }
+  }
+}
+
+.autumn-image-1-in {
+  right: 10px;
+  opacity: 0;
+  animation: AutumnImageAnimation1In 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.autumn-image-1-out {
+  right: 65px;
+  opacity: 1;
+  animation: AutumnImageAnimation1Out 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.autumn-image-2-in {
+  top: 35%;
+  opacity: 0;
+  animation: AutumnImageAnimation2In 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.autumn-image-2-out {
+  top: 50%;
+  opacity: 1;
+  animation: AutumnImageAnimation2Out 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes AutumnImageAnimation1In {
+  to {
+    right: 65px;
+    opacity: 1;
+  }
+}
+
+@keyframes AutumnImageAnimation1Out {
+  to {
+    right: 10px;
+    opacity: 0;
+  }
+}
+
+@keyframes AutumnImageAnimation2In {
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes AutumnImageAnimation2Out {
+  to {
+    top: 35%;
+    opacity: 0;
+  }
+}
+
+.autumn-image-text-1-in {
+  top: 40px;
+  opacity: 0;
+  animation: AutumnImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+}
+
+.autumn-image-text-1-out {
+  top: -20px;
+  opacity: 1;
+  animation: AutumnImageTextAnimation1Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.autumn-image-text-2-in {
+  bottom: 40px;
+  opacity: 0;
+  animation: AutumnImageTextAnimation2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+}
+
+.autumn-image-text-2-out {
+  bottom: -20px;
+  opacity: 1;
+  animation: AutumnImageTextAnimation2Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes AutumnImageTextAnimation1In {
+  to {
+    top: -20px;
+    opacity: 1;
+  }
+}
+
+@keyframes AutumnImageTextAnimation1Out {
+  to {
+    top: 40px;
+    opacity: 0;
+  }
+}
+
+@keyframes AutumnImageTextAnimation2In {
+  to {
+    bottom: -20px;
+    opacity: 1;
+  }
+}
+
+@keyframes AutumnImageTextAnimation2Out {
+  to {
+    bottom: -20px;
+    opacity: 0;
+  }
+}

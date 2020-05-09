@@ -13,7 +13,7 @@ import SpringSend from '../../../../assets/svgs/spring-send.svg';
 import AutumnSend from '../../../../assets/svgs/autumn-send.svg';
 import SummerSend from '../../../../assets/svgs/summer-send.svg';
 
-export default function ContactSection({ season }) {
+export default function ContactSection({ currentPage, season, language }) {
   return (
     <div className="contactSectionContainer"
       style={{
@@ -24,22 +24,28 @@ export default function ContactSection({ season }) {
       }}>
 
       <div className="contactSectionContainer__visit">
-        <h1 className="contactSectionContainer__visit-title">
-          What are you waiting for?!
+        <h1 className={currentPage === 3 ? 'contactSectionContainer__visit-title contact-title-in' :
+          'contactSectionContainer__visit-title contact-title-out'}>
+          {language === 'english' ? 'What are you waiting for?!' : 'O que você está esperando?!'}
         </h1>
-        <img className="contactSectionContainer__visit-logo" src={Bear} alt="Bear logo" />
-        <button className="contactSectionContainer__visit-button" style={{
-          color: season === 0 ? "#6291AF" :
-            season === 1 ? "#D46B7A" :
-              season === 2 ? "#EA8C5C" :
-                season === 3 ? "#E9C02E" : "#6291AF"
-        }}>
-          Visit our Website!
+        <img className={currentPage === 3 ? 'contactSectionContainer__visit-logo contact-logo-in' :
+          'contactSectionContainer__visit-logo contact-logo-out'} src={Bear} alt="Bear logo" />
+        <button className={currentPage === 3 ? 'contactSectionContainer__visit-button contact-button-in' :
+          'contactSectionContainer__visit-button contact-title-out'} style={{
+            color: season === 0 ? "#6291AF" :
+              season === 1 ? "#D46B7A" :
+                season === 2 ? "#EA8C5C" :
+                  season === 3 ? "#E9C02E" : "#6291AF"
+          }}>
+          {language === 'english' ? 'Visit our Website!' : 'Visite nosso Website!'}
         </button>
       </div>
 
-      <div className="contactSectionContainer__social">
-        <h1>Follow us on Social Media!</h1>
+      <div className={currentPage === 3 ? 'contactSectionContainer__social social-media-in' :
+        'contactSectionContainer__social social-media-out'}>
+        <h1>
+          {language === 'english' ? 'Follow us on Social Media' : 'Nos siga nas Redes Sociais'}
+        </h1>
         <div className="contactSectionContainer__social-links">
           <a href="">
             <img className="contactSectionContainer__social-links-instagram" src={Instagram} alt="Instagram Link" />
@@ -56,15 +62,16 @@ export default function ContactSection({ season }) {
         </div>
       </div>
 
-      <div className="contactSectionContainer__newsLetter">
+      <div className={currentPage === 3 ? 'contactSectionContainer__newsLetter newsletter-in' :
+        'contactSectionContainer__newsLetter newsletter-out'}>
         <h1>
-          Subscribe to our newsletter!
+          {language === 'english' ? 'Subscribe to our newsletter' : 'Assine a nossa newsletter'}
         </h1>
         <form action="">
-          <input type="text" placeholder="Your Email" />
+          <input type="text" placeholder={language === 'english' ? 'Your E-mail' : 'Seu E-mail'} />
           <button type="submit">
             <img src={
-              season === 0 ? WinterSend:
+              season === 0 ? WinterSend :
                 season === 1 ? SpringSend :
                   season === 2 ? AutumnSend :
                     season === 3 ? SummerSend : WinterSend
