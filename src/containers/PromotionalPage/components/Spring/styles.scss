@@ -1,3 +1,5 @@
+@import "../../../../mixins/mixins.scss";
+
 .spring {
   display: flex;
   align-items: center;
@@ -11,6 +13,11 @@
     left: -2%;
     top: 40%;
     transform: translateY(-50%);
+    
+    @include respond-to(medium) {
+      top: 50%;
+      left: -4%;
+    }
 
     &-text {
       &-h1 {
@@ -21,6 +28,10 @@
         transform: translateX(-40%);
         transform: translateY(0%);
         opacity: 0;
+
+        @include respond-to(medium) {
+          font-size: 90px;
+        }
       }
 
       &-h2 {
@@ -32,12 +43,20 @@
         transform: translateX(-40%);
         transform: translateY(0%);
         opacity: 0;
+
+        @include respond-to(medium) {
+          font-size: 25px;
+        }
       }
     }
 
     &-spring-leaf {
       width: 120px;
       margin: 0 16px;
+
+      @include respond-to(medium) {
+        width: 95px;
+      }
     }
   }
 
@@ -47,12 +66,20 @@
     width: 594px;
     height: 100vh;
 
+    @include respond-to(medium) {
+      width: 476px;
+    }
+
     &__image1 {
       z-index: 999;
       position: absolute;
       bottom: 0px;
       opacity: 0;
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(medium) {
+        width: 400px;
+      }
     }
 
     &__image2 {
@@ -61,6 +88,10 @@
       top: 0px;
       opacity: 1;
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(medium) {
+        width: 400px;
+      }
     }
 
     &__text1 {
@@ -79,6 +110,10 @@
         margin: 0;
         font-family: "Roboto Regular";
         font-size: 38px;
+
+        @include respond-to(medium) {
+          font-size: 30px;
+        }
       }
 
       h2 {
@@ -88,6 +123,11 @@
         opacity: 70%;
         font-weight: 200px;
         width: 225px;
+
+        @include respond-to(medium) {
+          font-size: 12px;
+          width: 197px;
+        }
       }
     }
 
@@ -103,10 +143,19 @@
       left: 140px;
       opacity: 0;
 
+      @include respond-to(medium) {
+        left: 90px;
+        opacity: 0;
+      }
+
       h1 {
         margin: 0;
         font-family: "Roboto Regular";
         font-size: 38px;
+
+        @include respond-to(medium) {
+          font-size: 30px;
+        }
       }
 
       h2 {
@@ -116,6 +165,11 @@
         opacity: 70%;
         font-weight: 200px;
         width: 225px;
+
+        @include respond-to(medium) {
+          font-size: 12px;
+          width: 197px;
+        }
       }
     }
   }
@@ -137,6 +191,12 @@
   left: 140px;
   opacity: 0;
   animation: SpringImageText2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+
+  @include respond-to(medium) {
+    left: 90px;
+    opacity: 0;
+    animation: SpringImageText2InResposive 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+  }
 }
 
 .spring-image-text-2-out {
@@ -162,6 +222,13 @@
 @keyframes SpringImageText2In {
   to {
     left: 240px;
+    opacity: 1;
+  }
+}
+
+@keyframes SpringImageText2InResposive {
+  to {
+    left: 160px;
     opacity: 1;
   }
 }

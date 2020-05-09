@@ -1,3 +1,5 @@
+@import '../../../../mixins/mixins.scss';
+
 .homeSectionContainer {
   height: 100vh;
   background: #6291AF;
@@ -7,9 +9,19 @@
   justify-content: center;
   color: white;
 
+  @include respond-to(medium) {
+    &__logo {
+      width: 680px;
+    }
+  }
+
   &__description {
     font-family: 'Lobster Regular';
     font-size: 45px;
     font-weight: 400;
+
+    @include respond-to(medium) {
+      font-size: 40px;
+    }
   }
 }

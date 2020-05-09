@@ -1,3 +1,5 @@
+@import '../../../../mixins/mixins.scss';
+
 .summer {
   display: flex;
   align-items: center;
@@ -12,6 +14,11 @@
     top: 40%;
     transform: translateY(-50%);
 
+    @include respond-to(medium) {
+      top: 50%;
+      left: -4%;
+    }
+
     &-text {
       &-h1 {
         font-family: "Lobster Regular";
@@ -20,6 +27,10 @@
         margin: 0;
         transform: translateX(-40%);
         opacity: 0;
+
+        @include respond-to(medium) {
+          font-size: 90px;
+        }
       }
 
       &-h2 {
@@ -30,12 +41,20 @@
         width: 272px;
         transform: translateX(-40%);
         opacity: 0;
+
+        @include respond-to(medium) {
+          font-size: 25px;
+        }
       }
     }
 
     &-sun {
       width: 120px;
       margin: 0 16px;
+
+      @include respond-to(medium) {
+        width: 95px;
+      }
     }
   }
 
@@ -45,6 +64,10 @@
     width: 661px;
     height: 100vh;
 
+    @include respond-to(medium) {
+      width: 531px;
+    }
+
     &__image1 {
       align-self: flex-start;
       position: absolute;
@@ -52,6 +75,10 @@
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
       top: -20%;
       opacity: 0;
+
+      @include respond-to(medium) {
+        width: 260px;
+      }
     }
 
     &__image2 {
@@ -61,6 +88,10 @@
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
       top: 80%;
       opacity: 0;
+
+      @include respond-to(medium) {
+        width: 260px;
+      }
     }
 
     &__text1 {
@@ -73,12 +104,16 @@
       top: 72px;
       width: 225px;
       transform: translateX(-35%);
-      opacity: 0;
+      opacity: 1;
 
       h1 {
         margin: 0;
         font-family: "Roboto Regular";
         font-size: 38px;
+
+        @include respond-to(medium) {
+          font-size: 30px;
+        }
       }
 
       h2 {
@@ -87,6 +122,11 @@
         font-size: 16px;
         opacity: 70%;
         font-weight: 200px;
+
+        @include respond-to(medium) {
+          font-size: 12px;
+          width: 230px;
+        }
       }
     }
 
@@ -108,6 +148,10 @@
         margin: 0;
         font-family: "Roboto Regular";
         font-size: 38px;
+
+        @include respond-to(medium) {
+          font-size: 30px;
+        }
       }
 
       h2 {
@@ -116,24 +160,51 @@
         font-size: 16px;
         opacity: 70%;
         font-weight: 200px;
+
+        @include respond-to(medium) {
+          font-size: 12px;
+          width: 230px;
+        }
       }
     }
   }
 }
 
-
 .summer-image-1-in {
+  top: -20%;
+  opacity: 0;
   animation: summerImageAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
 }
 
+.summer-image-1-out {
+  top: 64px;
+  opacity: 1;
+  animation: summerImageAnimation1Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 .summer-image-2-in {
+  top: 80%;
+  opacity: 0;
   animation: summerImageAnimation2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.summer-image-2-Out {
+  top: 60%;
+  opacity: 1;
+  animation: summerImageAnimation2Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes summerImageAnimation1In {
   to {
     top: 64px;
     opacity: 1;
+  }
+}
+
+@keyframes summerImageAnimation1Out {
+  to {
+    top: -20%;
+    opacity: 0;
   }
 }
 
@@ -144,13 +215,38 @@
   }
 }
 
+@keyframes summerImageAnimation2Out {
+  to {
+    top: 80%;
+    opacity: 0;
+  }
+}
+
 .summer-text-image-1-in {
+  transform: translateX(-35%);
+  opacity: 0;
   animation: summerImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
 }
 
-.summer-text-image-2-in {
-  animation: summerImageTextAnimation2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+.summer-text-image-1-out {
+  transform: translateX(0%);
+  opacity: 1;
+  animation: summerImageTextAnimation1Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
+.summer-text-image-2-in {
+  transform: translateX(0%);
+  opacity: 0;
+  animation: summerImageTextAnimation2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+} 
+
+.summer-text-image-2-out {
+  transform: translateX(20%);
+  opacity: 1;
+  animation: summerImageTextAnimation2Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+} 
+
+
 
 @keyframes summerImageTextAnimation1In {
   to {
@@ -159,9 +255,23 @@
   }
 }
 
+@keyframes summerImageTextAnimation1Out {
+  to {
+    transform: translateX(-35%);
+    opacity: 0;
+  }
+}
+
 @keyframes summerImageTextAnimation2In {
   to {
     transform: translateX(20%);
     opacity: 1;
+  }
+}
+
+@keyframes summerImageTextAnimation2Out {
+  to {
+    transform: translateX(0%);
+    opacity: 0;
   }
 }

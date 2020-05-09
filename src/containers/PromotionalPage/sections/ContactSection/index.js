@@ -6,7 +6,7 @@ import Bear from '../../../../assets/svgs/Bear.svg';
 import Instagram from '../../../../assets/svgs/instagram.svg';
 import Twitter from '../../../../assets/svgs/twitter.svg';
 import Facebook from '../../../../assets/svgs/facebook.svg';
-import Snapchat from '../../../../assets/svgs/snapchat.svg';
+import Dribbble from '../../../../assets/svgs/dribbble.svg';
 
 import WinterSend from '../../../../assets/svgs/winter-send.svg';
 import SpringSend from '../../../../assets/svgs/spring-send.svg';
@@ -57,7 +57,7 @@ export default function ContactSection({ currentPage, season, language }) {
             <img className="contactSectionContainer__social-links-twitter" src={Twitter} alt="Twitter Link" />
           </a>
           <a href="">
-            <img className="contactSectionContainer__social-links-snapchat" src={Snapchat} alt="Snapchat Link" />
+            <img className="contactSectionContainer__social-links-snapchat" src={Dribbble} alt="Dribbble Link" />
           </a>
         </div>
       </div>
