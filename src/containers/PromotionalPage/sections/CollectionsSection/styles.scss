@@ -15,7 +15,12 @@
     font-size: 95px;
     font-weight: 400;
     font-family: 'Lobster Regular';
-    margin: 0;
+    margin: 0;  
+
+    @include respond-to(medium) {
+      top: 7px;
+      font-size: 85px;
+    }
   }
 
   &__carousel {

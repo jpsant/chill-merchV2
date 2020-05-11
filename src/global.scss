@@ -21,6 +21,8 @@ body {
   }
 }
 
+button:focus {outline:0;}
+
 .fade-enter {
   opacity: 0;
 }

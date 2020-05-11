@@ -52,7 +52,7 @@ export default function CollectionstSection({ season, language }) {
       }}>
       <h1 className="collectionsSectionContainer-h1">{language === 'english' ? 'For all the Occasions' : 'Para todas as Ocasiões'}</h1>
       <Carousel
-        partialVisible={true}
+        partialVisible={false}
         arrows
         autoPlay={true}
         autoPlaySpeed={3000}
