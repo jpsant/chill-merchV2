@@ -1,3 +1,5 @@
+@import '../../mixins/mixins.scss';
+
 .BearLogo {
   position: absolute;
   z-index: 999;
@@ -5,4 +7,9 @@
   left: 16px;
   opacity: 1;
   transition: opacity .4s;
+
+  @include respond-to(medium) {
+    width: 100px;
+    top: 8px;
+  }
 }
