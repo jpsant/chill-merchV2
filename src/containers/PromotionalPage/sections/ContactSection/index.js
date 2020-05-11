@@ -47,17 +47,17 @@ export default function ContactSection({ currentPage, season, language }) {
           {language === 'english' ? 'Follow us on Social Media' : 'Nos siga nas Redes Sociais'}
         </h1>
         <div className="contactSectionContainer__social-links">
-          <a href="">
+          <a href="https://www.instagram.com/jampalo_/">
             <img className="contactSectionContainer__social-links-instagram" src={Instagram} alt="Instagram Link" />
           </a>
-          <a href="">
+          <a href="https://www.facebook.com/">
             <img className="contactSectionContainer__social-links-facebook" src={Facebook} alt="Facebook Link" />
           </a>
-          <a href="">
+          <a href="https://twitter.com/J_Paaulinho">
             <img className="contactSectionContainer__social-links-twitter" src={Twitter} alt="Twitter Link" />
           </a>
-          <a href="">
-            <img className="contactSectionContainer__social-links-snapchat" src={Dribbble} alt="Dribbble Link" />
+          <a href="https://dribbble.com/JSantana">
+            <img className="contactSectionContainer__social-links-dribbble" src={Dribbble} alt="Dribbble Link" />
           </a>
         </div>
       </div>
@@ -79,7 +79,6 @@ export default function ContactSection({ currentPage, season, language }) {
           </button>
         </form>
       </div>
-
     </div>
   )
 }
