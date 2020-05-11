@@ -14,6 +14,11 @@ import AutumnSend from '../../../../assets/svgs/autumn-send.svg';
 import SummerSend from '../../../../assets/svgs/summer-send.svg';
 
 export default function ContactSection({ currentPage, season, language }) {
+
+  function submitFormHandler(e) {
+    e.preventDefault();
+  }
+
   return (
     <div className="contactSectionContainer"
       style={{
@@ -67,7 +72,7 @@ export default function ContactSection({ currentPage, season, language }) {
         <h1>
           {language === 'english' ? 'Subscribe to our newsletter' : 'Assine a nossa newsletter'}
         </h1>
-        <form action="">
+        <form onSubmit={submitFormHandler}>
           <input type="text" placeholder={language === 'english' ? 'Your E-mail' : 'Seu E-mail'} />
           <button type="submit">
             <img src={
