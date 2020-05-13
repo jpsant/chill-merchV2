@@ -1,4 +1,4 @@
-@import '../../../../mixins/mixins.scss';
+@import "../../../../mixins/mixins.scss";
 
 .autumn {
   display: flex;
@@ -120,7 +120,7 @@
     &__image1-mobile {
       display: none;
       position: absolute;
-      top: 55.5%;
+      top: 56%;
       transform: translateY(0%);
       bottom: 64px;
       right: 0;
@@ -181,9 +181,17 @@
       justify-self: flex-start;
       flex-direction: column;
       top: 40px;
-      opacity: 0;
+      opacity: 1;
       left: 10px;
       z-index: 99996;
+
+      @include respond-to(mobile) {
+        top: 30px;
+        align-self: flex-end;
+        /* left: 10px; -> 60px */
+        left: 60px;
+        opacity: 0;
+      }
 
       h1 {
         margin: 0;
@@ -214,7 +222,7 @@
 
         @include respond-to(mobile) {
           font-size: 9px;
-          width: 130px;
+          width: 207px;
         }
       }
     }
@@ -226,10 +234,16 @@
       bottom: 40px;
       opacity: 0;
       left: 10px;
-      align-self: center !important;
+      align-self: center;
       justify-self: flex-start !important;
       flex-direction: column;
       z-index: 999;
+
+      @include respond-to(mobile) {
+        align-self: flex-end;
+        bottom: 80px;
+        left: 80px;
+      }
 
       h1 {
         margin: 0;
@@ -260,7 +274,7 @@
 
         @include respond-to(mobile) {
           font-size: 9px;
-          width: 130px;
+          width: 207px;
         }
       }
     }
@@ -272,7 +286,7 @@
   opacity: 0;
   animation: AutumnImageAnimation1In 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
 
-  @include respond-to(mobile){
+  @include respond-to(mobile) {
     right: 64px;
     opacity: 0;
     animation: AutumnImageAnimation1InMobile 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
@@ -345,10 +359,17 @@
   }
 }
 
-/* .autumn-image-text-1-in {
+.autumn-image-text-1-in {
   top: 40px;
   opacity: 0;
   animation: AutumnImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+
+  @include respond-to(mobile) {
+    top: 30px;
+    left: 60px;
+    opacity: 0;
+    animation: AutumnImageTextAnimation1InMobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+  }
 }
 
 .autumn-image-text-1-out {
@@ -361,17 +382,31 @@
   bottom: 40px;
   opacity: 0;
   animation: AutumnImageTextAnimation2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+
+  @include respond-to(mobile) {
+    left: 60px;
+    bottom: 80px;
+    opacity: 0;
+    animation: AutumnImageTextAnimation1InMobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+  }
 }
 
 .autumn-image-text-2-out {
   bottom: -20px;
   opacity: 1;
   animation: AutumnImageTextAnimation2Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-} */
+}
 
 @keyframes AutumnImageTextAnimation1In {
   to {
     top: -20px;
+    opacity: 1;
+  }
+}
+
+@keyframes AutumnImageTextAnimation1InMobile {
+  to {
+    left: 10px;
     opacity: 1;
   }
 }
@@ -386,6 +421,13 @@
 @keyframes AutumnImageTextAnimation2In {
   to {
     bottom: -20px;
+    opacity: 1;
+  }
+}
+
+@keyframes AutumnImageTextAnimation2InMobile {
+  to {
+    left: 10px;
     opacity: 1;
   }
 }
