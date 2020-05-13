@@ -46,6 +46,24 @@ export default function ContactSection({ currentPage, season, language }) {
         </button>
       </div>
 
+      <div className={currentPage === 3 ? 'contactSectionContainer__newsLetter newsletter-in' :
+        'contactSectionContainer__newsLetter newsletter-out'}>
+        <h1>
+          {language === 'english' ? 'Subscribe to our newsletter' : 'Assine a nossa newsletter'}
+        </h1>
+        <form onSubmit={submitFormHandler}>
+          <input type="email" placeholder={language === 'english' ? 'Your E-mail' : 'Seu E-mail'} />
+          <button type="submit">
+            <img src={
+              season === 0 ? WinterSend :
+                season === 1 ? SpringSend :
+                  season === 2 ? AutumnSend :
+                    season === 3 ? SummerSend : WinterSend
+            } alt="submit form" />
+          </button>
+        </form>
+      </div>
+
       <div className={currentPage === 3 ? 'contactSectionContainer__social social-media-in' :
         'contactSectionContainer__social social-media-out'}>
         <h1>
@@ -65,24 +83,6 @@ export default function ContactSection({ currentPage, season, language }) {
             <img className="contactSectionContainer__social-links-dribbble" src={Dribbble} alt="Dribbble Link" />
           </a>
         </div>
-      </div>
-
-      <div className={currentPage === 3 ? 'contactSectionContainer__newsLetter newsletter-in' :
-        'contactSectionContainer__newsLetter newsletter-out'}>
-        <h1>
-          {language === 'english' ? 'Subscribe to our newsletter' : 'Assine a nossa newsletter'}
-        </h1>
-        <form onSubmit={submitFormHandler}>
-          <input type="text" placeholder={language === 'english' ? 'Your E-mail' : 'Seu E-mail'} />
-          <button type="submit">
-            <img src={
-              season === 0 ? WinterSend :
-                season === 1 ? SpringSend :
-                  season === 2 ? AutumnSend :
-                    season === 3 ? SummerSend : WinterSend
-            } alt="submit form" />
-          </button>
-        </form>
       </div>
     </div>
   )

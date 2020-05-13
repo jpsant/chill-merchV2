@@ -16,7 +16,7 @@ import './styles.scss';
 class PromotionalPage extends Component {
 
   state = {
-    currentPage: 1,
+    currentPage: 0,
     currentLanguage: 'english',
     seasonsSection: 0
   }

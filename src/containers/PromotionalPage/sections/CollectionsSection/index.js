@@ -24,14 +24,6 @@ export default function CollectionstSection({ season, language }) {
       items: 4,
       partialVisibilityGutter: 40
     },
-    mobile: {
-      breakpoint: {
-        max: 464,
-        min: 0
-      },
-      items: 1,
-      partialVisibilityGutter: 30
-    },
     tablet: {
       breakpoint: {
         max: 1024,
@@ -39,7 +31,14 @@ export default function CollectionstSection({ season, language }) {
       },
       items: 2,
       partialVisibilityGutter: 30
-    }
+    },
+    mobile: {
+      breakpoint: {
+        max: 550,
+        min: 250
+      },
+      items: 1,
+    },
   }
 
   return (
@@ -52,7 +51,7 @@ export default function CollectionstSection({ season, language }) {
       }}>
       <h1 className="collectionsSectionContainer-h1">{language === 'english' ? 'For all the Occasions' : 'Para todas as Ocasiões'}</h1>
       <Carousel
-        partialVisible={false}
+        centerMode
         arrows
         autoPlay={true}
         autoPlaySpeed={3000}
@@ -66,6 +65,7 @@ export default function CollectionstSection({ season, language }) {
         responsive={responsive}
         showDots={false}
         transitionDuration={600}
+        slidesToSlide={1}
       >
         <Card language={language} title={language === 'english' ? 'Casual Choise' : 'Escolha Casual'} BGColor="#114566" image={image1} />
         <Card language={language} title={language === 'english' ? 'Sunday Morning' : 'Doming de Manhã'} BGColor="#954930" image={image2} />

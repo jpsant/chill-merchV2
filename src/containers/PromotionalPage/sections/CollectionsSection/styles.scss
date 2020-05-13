@@ -21,6 +21,12 @@
       top: 7px;
       font-size: 85px;
     }
+
+    @include respond-to(mobile) {
+      font-size: 65px;
+      top: 105px;
+      line-height: 70px;
+    }
   }
 
   &__carousel {
@@ -29,9 +35,17 @@
     width: 100%;
     top: 50%;
     transform: translateY(-40%);
+
+    @include respond-to(mobile) {
+      transform: translateY(-35%);
+    }
   }
 }
 
 .carousel-item {
   margin: -10px;
+
+  @include respond-to(mobile) {
+    margin: 33px;
+  }
 }
