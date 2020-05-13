@@ -9,7 +9,7 @@
 
   @include respond-to(mobile) {
     transform: translateX(0px);
-    justify-content: start;
+    justify-content: center;
   }
 
   &-titleContainer {
@@ -123,7 +123,7 @@
       align-self: flex-start;
       opacity: 0;
       position: absolute;
-      transform: translateX(10%);
+      transform: translateX(0%);
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
 
       @include respond-to(medium) {
@@ -162,7 +162,7 @@
       opacity: 0;
       z-index: 999;
       position: absolute;
-      transform: translate(125%, -40%);
+      transform: translate(80%, -40%);
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
 
       @include respond-to(medium) {
@@ -189,6 +189,14 @@
       transform: translateX(-35%);
       opacity: 0;
 
+      @include respond-to(mobile) {
+        opacity: 0;
+        transform: translateX(-35%); //transform to 0
+        top: 10px;
+        align-self: flex-end;
+        width: auto;
+      }
+
       h1 {
         margin: 0;
         font-family: "Roboto Regular";
@@ -196,6 +204,10 @@
 
         @include respond-to(medium) {
           font-size: 30px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 22px;
         }
       }
 
@@ -209,6 +221,12 @@
         @include respond-to(medium) {
           font-size: 12px;
           width: 230px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 9px;
+          text-align: right;
+          width: 130px;
         }
       }
     }
@@ -218,7 +236,7 @@
       position: relative;
       display: flex;
       left: 10px;
-      align-self: center !important;
+      align-self: center;
       justify-self: flex-start !important;
       flex-direction: column;
       width: 225px;
@@ -227,6 +245,13 @@
       opacity: 0;
       top: 64px;
 
+      @include respond-to(mobile) {
+        opacity: 0;
+        transform: translateX(50%); //transform to -10
+        width: auto;
+        top: 110px;
+      }
+
       h1 {
         margin: 0;
         font-family: "Roboto Regular";
@@ -234,6 +259,11 @@
 
         @include respond-to(medium) {
           font-size: 30px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 22px;
+          align-self: flex-end;
         }
       }
 
@@ -247,6 +277,12 @@
         @include respond-to(medium) {
           font-size: 12px;
           width: 230px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 9px;
+          width: 130px;
+          text-align: right;
         }
       }
     }
@@ -331,10 +367,15 @@
   }
 }
 
-/* .summer-text-image-1-in {
+.summer-text-image-1-in {
   transform: translateX(-35%);
   opacity: 0;
   animation: summerImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+
+  @include respond-to(mobile) {
+    opacity: 0;
+    animation: summerImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+  }
 }
 
 .summer-text-image-1-out {
@@ -347,13 +388,19 @@
   transform: translateX(0%);
   opacity: 0;
   animation: summerImageTextAnimation2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+
+   @include respond-to(mobile) {
+    transform: translateX(45%);
+    opacity: 0;
+    animation: summerImageTextAnimation2InMobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+  }
 } 
 
 .summer-text-image-2-out {
   transform: translateX(20%);
   opacity: 1;
   animation: summerImageTextAnimation2Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-} */
+}
 
 @keyframes summerImageTextAnimation1In {
   to {
@@ -372,6 +419,13 @@
 @keyframes summerImageTextAnimation2In {
   to {
     transform: translateX(20%);
+    opacity: 1;
+  }
+}
+
+@keyframes summerImageTextAnimation2InMobile {
+  to {
+    transform: translateX(-10%);
     opacity: 1;
   }
 }
