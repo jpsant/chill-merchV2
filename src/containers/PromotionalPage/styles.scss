@@ -12,4 +12,8 @@
     width: 100px;
     top: 8px;
   }
+
+  @include respond-to(mobile) {
+    display: none;
+  }
 }
