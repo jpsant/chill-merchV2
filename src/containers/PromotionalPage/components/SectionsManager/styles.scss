@@ -1,3 +1,5 @@
+@import "../../../../mixins/mixins.scss";
+
 .left-button-container {
   z-index: 999;
   position: fixed;
@@ -17,22 +19,30 @@
       bottom: 16px;
       position: fixed;
       width: 140px;
+
+      @include respond-to(mobile) {
+        width: 84px;
+        top: 27%;
+        transform: translateY(-50%);
+        left: 19%;
+        transform: translateX(-50%);
+      }
     }
   }
 }
 
 .right-button-container {
-  z-index: 999;
+  z-index: 9;
   position: fixed;
   bottom: 0;
   right: 0;
   transition: all 0.3s;
-
+  
   &__button {
     background: transparent;
     border: none;
     cursor: pointer;
-
+    
     &-img {
       transform: translateX(110%);
       opacity: 0;
@@ -40,8 +50,15 @@
       width: 140px;
       right: 16px;
       bottom: 16px;
-      transform: translateX(110%);
       opacity: 1;
+
+      @include respond-to(mobile) {
+        width: 84px;
+        top: 27%;
+        transform: translateY(-50%);
+        right: 19%;
+        transform: translateX(-50%);
+      }
     }
   }
 }

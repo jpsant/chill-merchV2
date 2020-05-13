@@ -1,4 +1,4 @@
-@import '../../../../mixins/mixins.scss';
+@import "../../../../mixins/mixins.scss";
 
 .summer {
   display: flex;
@@ -6,6 +6,11 @@
   justify-content: center;
   transform: translateX(74px);
   transition: all 0.5s;
+
+  @include respond-to(mobile) {
+    transform: translateX(0px);
+    justify-content: start;
+  }
 
   &-titleContainer {
     display: flex;
@@ -19,6 +24,14 @@
       left: -4%;
     }
 
+    @include respond-to(mobile) {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 70px;
+      flex-direction: column;
+      align-items: center;
+    }
+
     &-text {
       &-h1 {
         font-family: "Lobster Regular";
@@ -30,6 +43,10 @@
 
         @include respond-to(medium) {
           font-size: 90px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 85px;
         }
       }
 
@@ -45,6 +62,12 @@
         @include respond-to(medium) {
           font-size: 25px;
         }
+
+        @include respond-to(mobile) {
+          font-size: 17px;
+          line-height: 25px;
+          margin: 0;
+        }
       }
     }
 
@@ -54,6 +77,11 @@
 
       @include respond-to(medium) {
         width: 95px;
+      }
+
+      @include respond-to(mobile) {
+        width: 73.36px;
+        margin-top: 8px;
       }
     }
   }
@@ -68,6 +96,10 @@
       width: 531px;
     }
 
+    @include respond-to(mobile) {
+      width: 363px;
+    }
+
     &__image1 {
       align-self: flex-start;
       position: absolute;
@@ -78,6 +110,32 @@
 
       @include respond-to(medium) {
         width: 260px;
+      }
+
+      @include respond-to(mobile) {
+        top: 50%;
+        display: none;
+      }
+    }
+
+    &__image1-mobile {
+      display: none;
+      align-self: flex-start;
+      opacity: 0;
+      position: absolute;
+      transform: translateX(10%);
+      box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(medium) {
+        width: 260px;
+      }
+
+      @include respond-to(mobile) {
+        display: block;
+        opacity: 1;
+        width: 202px;
+        top: 35%;
+        opacity: 0;
       }
     }
 
@@ -92,6 +150,31 @@
       @include respond-to(medium) {
         width: 260px;
       }
+
+      @include respond-to(mobile) {
+        display: none !important;
+        opacity: 0;
+      }
+    }
+
+    &__image2-mobile {
+      display: none;
+      opacity: 0;
+      z-index: 999;
+      position: absolute;
+      transform: translate(125%, -40%);
+      box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(medium) {
+        width: 260px;
+      }
+
+      @include respond-to(mobile) {
+        display: block;
+        opacity: 0;
+        width: 202px;
+        top: 82%;
+      }
     }
 
     &__text1 {
@@ -104,7 +187,7 @@
       top: 72px;
       width: 225px;
       transform: translateX(-35%);
-      opacity: 1;
+      opacity: 0;
 
       h1 {
         margin: 0;
@@ -174,6 +257,12 @@
   top: -20%;
   opacity: 0;
   animation: summerImageAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+
+  @include respond-to(mobile) {
+    top: 35%;
+    opacity: 0;
+    animation: summerImageAnimation1InMobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+  }
 }
 
 .summer-image-1-out {
@@ -186,6 +275,12 @@
   top: 80%;
   opacity: 0;
   animation: summerImageAnimation2In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+
+  @include respond-to(mobile) {
+    top: 82%;
+    oapcity: 0;
+    animation: summerImageAnimation2InMobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+  }
 }
 
 .summer-image-2-Out {
@@ -197,6 +292,13 @@
 @keyframes summerImageAnimation1In {
   to {
     top: 64px;
+    opacity: 1;
+  }
+}
+
+@keyframes summerImageAnimation1InMobile {
+  to {
+    top: 45%;
     opacity: 1;
   }
 }
@@ -215,6 +317,13 @@
   }
 }
 
+@keyframes summerImageAnimation2InMobile {
+  to {
+    top: 72%;
+    opacity: 1;
+  }
+}
+
 @keyframes summerImageAnimation2Out {
   to {
     top: 80%;
@@ -222,7 +331,7 @@
   }
 }
 
-.summer-text-image-1-in {
+/* .summer-text-image-1-in {
   transform: translateX(-35%);
   opacity: 0;
   animation: summerImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
@@ -244,9 +353,7 @@
   transform: translateX(20%);
   opacity: 1;
   animation: summerImageTextAnimation2Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-} 
-
-
+} */
 
 @keyframes summerImageTextAnimation1In {
   to {

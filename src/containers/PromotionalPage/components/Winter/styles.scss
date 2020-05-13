@@ -7,8 +7,14 @@
   transform: translateX(64px);
   transition: all 0.5s;
 
+  @include respond-to(mobile) {
+    transform: translateX(0px);
+    justify-content: start;
+  }
+
   &-titleContainer {
     display: flex;
+    justify-content: center;
     position: absolute;
     left: -2%;
     top: 40%;
@@ -17,6 +23,14 @@
     @include respond-to(medium) {
       top: 50%;
       left: -4%;
+    }
+
+    @include respond-to(mobile) {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 70px;
+      flex-direction: column;
+      align-items: center;
     }
 
     &-text {
@@ -31,6 +45,10 @@
 
         @include respond-to(medium) {
           font-size: 90px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 85px;
         }
       }
 
@@ -47,6 +65,11 @@
         @include respond-to(medium) {
           font-size: 25px;
         }
+
+        @include respond-to(mobile) {
+          font-size: 17px;
+          line-height: 10px;
+        }
       }
     }
 
@@ -58,6 +81,11 @@
 
       @include respond-to(medium) {
         width: 95px;
+      }
+
+      @include respond-to(mobile) {
+        width: 73.36px;
+        margin-top: 8px;
       }
     }
   }
@@ -72,6 +100,12 @@
       width: 476px;
     }
 
+    @include respond-to(mobile) {
+      width: 356px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     &__image1 {
       z-index: 999;
       position: absolute;
@@ -81,6 +115,15 @@
 
       @include respond-to(medium) {
         width: 255px;
+      }
+
+      @include respond-to(mobile) {
+        transform: translateX(-20%);
+        opacity: 0;
+        width: 222px;
+        opacity: 1;
+        top: 42%;
+        left: -10px;
       }
     }
 
@@ -94,6 +137,15 @@
       @include respond-to(medium) {
         width: 255px;
       }
+
+      @include respond-to(mobile) {
+        transform: translateX(20%);
+        opacity: 0;
+        width: 222px;
+        opacity: 1;
+        bottom: 2%;
+        right: -10px;
+      }
     }
 
     &__text1 {
@@ -104,9 +156,14 @@
       justify-self: flex-end;
       flex-direction: column;
       bottom: 50px;
-      z-index: 99996;
+      z-index: 999;
       transform: translateX(-25%);
       opacity: 0;
+
+      @include respond-to(mobile) {
+        transform: translateX(0);
+        top: 50%;
+      }
 
       h1 {
         margin: 0;
@@ -115,6 +172,10 @@
 
         @include respond-to(medium) {
           font-size: 30px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 22px;
         }
       }
 
@@ -129,6 +190,11 @@
         @include respond-to(medium) {
           font-size: 12px;
           width: 197px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 9px;
+          width: 130px;
         }
       }
     }
@@ -138,11 +204,17 @@
       position: relative;
       display: flex;
       top: 50px;
-      align-self: center !important;
-      justify-self: flex-start !important;
+      align-self: center;
+      justify-self: flex-start;
       flex-direction: column;
       transform: translateX(25%);
       opacity: 0;
+
+      @include respond-to(mobile) {
+        transform: translateX(0);
+        align-self: center;
+        top: 110px;
+      }
 
       h1 {
         margin: 0;
@@ -151,6 +223,10 @@
 
         @include respond-to(medium) {
           font-size: 30px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 22px;
         }
       }
 
@@ -165,6 +241,11 @@
         @include respond-to(medium) {
           font-size: 12px;
           width: 197px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 9px;
+          width: 130px;
         }
       }
     }
@@ -184,9 +265,14 @@
 }
 
 .winter-image-1-in {
-  top: 0;
   opacity: 0;
   animation: winterImage1In 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+
+  @include respond-to(mobile) {
+    transform: translateX(-20%);
+    opacity: 0;
+    animation: winterTextAnimationIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+  }
 }
 
 .winter-image-1-out {
@@ -196,9 +282,14 @@
 }
 
 .winter-image-2-in {
-  bottom: 0;
   opacity: 0;
   animation: winterImage2In 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+
+  @include respond-to(mobile) {
+    transform: translateX(20%);
+    opacity: 0;
+    animation: winterTextAnimationIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+  }
 }
 
 .winter-image-2-out {

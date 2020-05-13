@@ -1,4 +1,4 @@
-@import '../../../../mixins/mixins.scss';
+@import "../../../../mixins/mixins.scss";
 
 .languageSwitcherContainer {
   position: absolute;
@@ -14,6 +14,33 @@
     @include respond-to(medium) {
       width: 177px;
     }
+
+    @include respond-to(mobile) {
+      display: none;
+    }
+  }
+
+  &-mobileLanguageSwitcherBG {
+    display: none;
+    position: fixed;
+    right: 4px;
+    top: 4px;
+
+    @include respond-to(mobile) {
+      display: block;
+    }
+  }
+
+  &-mobileMenu {
+    display: none;
+    position: fixed;
+    top: 32px;
+    left: 24px;
+    cursor: pointer;
+    
+    @include respond-to(mobile) {
+      display: block;
+    }
   }
 
   &-languageSwitcherFlag {
@@ -23,10 +50,18 @@
     z-index: 99;
     width: 86px;
     cursor: pointer;
-    transition: transform .3s cubic-bezier(.175,.885,.32,1.275),-webkit-transform .3s cubic-bezier(.175,.885,.32,1.275);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     @include respond-to(medium) {
       width: 70px;
+    }
+
+    @include respond-to(mobile) {
+      width: 41.69px;
+      height: 42.04px;
+      top: 32px;
+      right: 34px;
     }
   }
 
@@ -45,8 +80,8 @@
     position: fixed;
     width: 240px;
     height: 60px;
-    z-index: 999;
-    transition: all .4s;
+    z-index: 9999 !important;
+    transition: all 0.4s;
     box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
 
     @include respond-to(medium) {
@@ -55,7 +90,15 @@
       width: 220px;
       right: 180px;
     }
-    
+
+    @include respond-to(mobile) {
+      right: 14px;
+      top: 108px;
+      width: 82px;
+      height: 192px;
+      flex-direction: column;
+    }
+
     &-brazil {
       margin-right: 50px;
       width: 60px;
@@ -63,6 +106,13 @@
 
       @include respond-to(medium) {
         width: 50px;
+      }
+
+      @include respond-to(mobile) {
+        margin-right: 0px;
+        margin-bottom: 50px;
+        width: 58.28px;
+        height: 37.64px;
       }
     }
 
@@ -72,6 +122,12 @@
 
       @include respond-to(medium) {
         width: 50px;
+      }
+
+      @include respond-to(mobile) {
+        margin-right: 0px;
+        width: 58.28px;
+        height: 37.64px;
       }
     }
   }

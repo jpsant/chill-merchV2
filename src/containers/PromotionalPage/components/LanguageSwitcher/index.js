@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './styles.scss';
 
 import languageBG from '../../../../assets/svgs/languageBG.svg';
+import languageMobileBG from '../../../../assets/svgs/languageMobileBG.svg';
+import mobileMenu from '../../../../assets/svgs/mobile-menu.svg';
 import euaFlag from '../../../../assets/svgs/eua-flag.svg';
 import brazilFlag from '../../../../assets/svgs/brazil-flag.svg';
 
@@ -16,6 +18,8 @@ export default function LanguageSwitcher({ language, languageChanger }) {
   return (
     <div className="languageSwitcherContainer">
       <img className="languageSwitcherContainer-languageSwitcherBG" src={languageBG} alt="languageSwitcher BG" />
+      <img className="languageSwitcherContainer-mobileLanguageSwitcherBG" src={languageMobileBG} alt="languageSwitcher BG" />
+      <img className="languageSwitcherContainer-mobileMenu" src={mobileMenu} alt="languageSwitcher BG" />
       <img onClick={() => setModal(!modal)}
         className="languageSwitcherContainer-languageSwitcherFlag" src={language === 'english' ? euaFlag : brazilFlag} alt="languageSwitcher BG" />
       <div className="languageSwitcherContainer__modal" style={{ opacity: modal ? '1' : '0', visibility: modal ? 'visible' : 'hidden' }}>

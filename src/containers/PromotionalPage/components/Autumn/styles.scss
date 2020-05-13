@@ -7,6 +7,11 @@
   transform: translateX(74px);
   transition: all 0.5s;
 
+  @include respond-to(mobile) {
+    transform: translateX(0px);
+    justify-content: center;
+  }
+
   &-titleContainer {
     display: flex;
     position: absolute;
@@ -17,6 +22,14 @@
     @include respond-to(medium) {
       top: 50%;
       left: -4%;
+    }
+
+    @include respond-to(mobile) {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 70px;
+      flex-direction: column;
+      align-items: center;
     }
 
     &-text {
@@ -30,6 +43,10 @@
 
         @include respond-to(medium) {
           font-size: 90px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 85px;
         }
       }
 
@@ -45,6 +62,12 @@
         @include respond-to(medium) {
           font-size: 25px;
         }
+
+        @include respond-to(mobile) {
+          font-size: 17px;
+          line-height: 25px;
+          margin: 0;
+        }
       }
     }
 
@@ -54,6 +77,11 @@
 
       @include respond-to(medium) {
         width: 95px;
+      }
+
+      @include respond-to(mobile) {
+        width: 73.36px;
+        margin-top: 8px;
       }
     }
   }
@@ -68,17 +96,44 @@
       width: 476px;
     }
 
+    @include respond-to(mobile) {
+      width: 387px;
+    }
+
     &__image1 {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       bottom: 64px;
       right: 10px;
-      opacity: 1;
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
 
       @include respond-to(medium) {
         width: 400px;
+      }
+
+      @include respond-to(mobile) {
+        display: none;
+      }
+    }
+
+    &__image1-mobile {
+      display: none;
+      position: absolute;
+      top: 55.5%;
+      transform: translateY(0%);
+      bottom: 64px;
+      right: 0;
+      box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(medium) {
+        width: 400px;
+      }
+
+      @include respond-to(mobile) {
+        width: 280px;
+        display: block;
+        opacity: 0;
       }
     }
 
@@ -92,6 +147,29 @@
 
       @include respond-to(medium) {
         width: 300px;
+      }
+
+      @include respond-to(mobile) {
+        display: none;
+      }
+    }
+
+    &__image2-mobile {
+      display: none;
+      z-index: 999;
+      position: absolute;
+      transform: translate(125%, 50%);
+      top: 15%;
+      opacity: 0;
+      box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(medium) {
+        width: 300px;
+      }
+
+      @include respond-to(mobile) {
+        width: 187px;
+        display: block;
       }
     }
 
@@ -115,6 +193,10 @@
         @include respond-to(medium) {
           font-size: 30px;
         }
+
+        @include respond-to(mobile) {
+          font-size: 22px;
+        }
       }
 
       h2 {
@@ -128,6 +210,11 @@
         @include respond-to(medium) {
           font-size: 12px;
           width: 230px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 9px;
+          width: 130px;
         }
       }
     }
@@ -152,6 +239,10 @@
         @include respond-to(medium) {
           font-size: 30px;
         }
+
+        @include respond-to(mobile) {
+          font-size: 22px;
+        }
       }
 
       h2 {
@@ -166,6 +257,11 @@
           font-size: 12px;
           width: 230px;
         }
+
+        @include respond-to(mobile) {
+          font-size: 9px;
+          width: 130px;
+        }
       }
     }
   }
@@ -175,6 +271,12 @@
   right: 10px;
   opacity: 0;
   animation: AutumnImageAnimation1In 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+
+  @include respond-to(mobile){
+    right: 64px;
+    opacity: 0;
+    animation: AutumnImageAnimation1InMobile 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+  }
 }
 
 .autumn-image-1-out {
@@ -187,6 +289,12 @@
   top: 35%;
   opacity: 0;
   animation: AutumnImageAnimation2In 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+
+  @include respond-to(mobile) {
+    top: 15%;
+    opacity: 0;
+    animation: AutumnImageAnimation2InMobile 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+  }
 }
 
 .autumn-image-2-out {
@@ -198,6 +306,13 @@
 @keyframes AutumnImageAnimation1In {
   to {
     right: 65px;
+    opacity: 1;
+  }
+}
+
+@keyframes AutumnImageAnimation1InMobile {
+  to {
+    right: 128px;
     opacity: 1;
   }
 }
@@ -216,6 +331,13 @@
   }
 }
 
+@keyframes AutumnImageAnimation2InMobile {
+  to {
+    top: 25%;
+    opacity: 1;
+  }
+}
+
 @keyframes AutumnImageAnimation2Out {
   to {
     top: 35%;
@@ -223,7 +345,7 @@
   }
 }
 
-.autumn-image-text-1-in {
+/* .autumn-image-text-1-in {
   top: 40px;
   opacity: 0;
   animation: AutumnImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
@@ -245,7 +367,7 @@
   bottom: -20px;
   opacity: 1;
   animation: AutumnImageTextAnimation2Out 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
+} */
 
 @keyframes AutumnImageTextAnimation1In {
   to {

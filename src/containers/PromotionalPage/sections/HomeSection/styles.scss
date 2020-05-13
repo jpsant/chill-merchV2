@@ -12,6 +12,10 @@
   @include respond-to(medium) {
     &__logo {
       width: 680px;
+
+      @include respond-to(mobile) {
+        width: 316.66px;
+      }
     }
   }
 
@@ -22,6 +26,10 @@
 
     @include respond-to(medium) {
       font-size: 40px;
+    }
+
+    @include respond-to(mobile) {
+      font-size: 18px;
     }
   }
 }

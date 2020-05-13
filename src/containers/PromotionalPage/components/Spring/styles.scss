@@ -7,16 +7,29 @@
   transform: translateX(64px);
   transition: all 0.5s;
 
+  @include respond-to(mobile) {
+    transform: translateX(0px);
+    justify-content: flex-start;
+  }
+
   &-titleContainer {
     display: flex;
     position: absolute;
     left: -2%;
     top: 40%;
     transform: translateY(-50%);
-    
+
     @include respond-to(medium) {
       top: 50%;
       left: -4%;
+    }
+
+    @include respond-to(mobile) {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 70px;
+      flex-direction: column;
+      align-items: center;
     }
 
     &-text {
@@ -31,6 +44,10 @@
 
         @include respond-to(medium) {
           font-size: 90px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 85px;
         }
       }
 
@@ -47,6 +64,12 @@
         @include respond-to(medium) {
           font-size: 25px;
         }
+
+        @include respond-to(mobile) {
+          font-size: 17px;
+          line-height: 25px;
+          margin: 0;
+        }
       }
     }
 
@@ -56,6 +79,11 @@
 
       @include respond-to(medium) {
         width: 95px;
+      }
+
+      @include respond-to(mobile) {
+        width: 73.36px;
+        margin-top: 8px;
       }
     }
   }
@@ -70,6 +98,12 @@
       width: 476px;
     }
 
+    @include respond-to(mobile) {
+      width: 452px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     &__image1 {
       z-index: 999;
       position: absolute;
@@ -79,6 +113,30 @@
 
       @include respond-to(medium) {
         width: 400px;
+      }
+
+      @include respond-to(mobile) {
+        display: none;
+      }
+    }
+
+    &__image1-mobile {
+      display: none;
+      z-index: 99;
+      position: absolute;
+      opacity: 1;
+      bottom: 5%;
+      left: 0px;
+      box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(medium) {
+        width: 400px;
+      }
+
+      @include respond-to(mobile) {
+        display: block;
+        width: 259px;
+        bottom: 0;
       }
     }
 
@@ -91,6 +149,29 @@
 
       @include respond-to(medium) {
         width: 400px;
+      }
+
+      @include respond-to(mobile) {
+        display: none;
+      }
+    }
+
+    &__image2-mobile {
+      display: none;
+      position: absolute;
+      top: 40%;
+      right: 0;
+      opacity: 1;
+      box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(medium) {
+        width: 400px;
+      }
+
+      @include respond-to(mobile) {
+        width: 259px;
+        display: block;
+        z-index: 999;
       }
     }
 
@@ -106,6 +187,12 @@
       z-index: 99996;
       opacity: 0;
 
+      @include respond-to(mobile) {
+        left: 60px;
+        opacity: 0;
+        top: 50%;
+      }
+
       h1 {
         margin: 0;
         font-family: "Roboto Regular";
@@ -113,6 +200,10 @@
 
         @include respond-to(medium) {
           font-size: 30px;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 22px;
         }
       }
 
@@ -128,6 +219,12 @@
           font-size: 12px;
           width: 197px;
         }
+
+        @include respond-to(mobile) {
+          font-size: 9px;
+          width: 130px;
+          text-align: right;
+        }
       }
     }
 
@@ -136,15 +233,24 @@
       position: relative;
       display: flex;
       bottom: 0px;
-      align-self: center !important;
-      justify-self: flex-end !important;
+      align-self: center;
+      justify-self: flex-end;
       flex-direction: column;
       z-index: 999;
-      left: 140px;
+      left: 0px;
       opacity: 0;
 
       @include respond-to(medium) {
         left: 90px;
+        opacity: 0;
+      }
+
+      @include respond-to(mobile) {
+        text-align: left;
+        justify-self: flex-end;
+        align-self: none;
+        bottom: -30%;
+        left: -60px;
         opacity: 0;
       }
 
@@ -156,6 +262,10 @@
         @include respond-to(medium) {
           font-size: 30px;
         }
+
+        @include respond-to(mobile) {
+          font-size: 22px;
+        }
       }
 
       h2 {
@@ -170,6 +280,11 @@
           font-size: 12px;
           width: 197px;
         }
+
+        @include respond-to(mobile) {
+          font-size: 9px;
+          width: 130px;
+        }
       }
     }
   }
@@ -179,6 +294,12 @@
   right: -160px;
   opacity: 0;
   animation: SpringImageText1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+
+  @include respond-to(mobile) {
+    left: 60px;
+    opacity: 0;
+    animation: SpringImageText1InMobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+  }
 }
 
 .spring-image-text-1-out {
@@ -197,6 +318,12 @@
     opacity: 0;
     animation: SpringImageText2InResposive 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
   }
+
+  @include respond-to(mobile) {
+    left: -60px;
+    opacity: 0; 
+    animation: SpringImageText2InMobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+  }
 }
 
 .spring-image-text-2-out {
@@ -212,6 +339,13 @@
   }
 }
 
+@keyframes SpringImageText1InMobile {
+  to {
+    left: 30px;
+    opacity: 1;
+  }
+}
+
 @keyframes SpringImageText1Out {
   to {
     right: -160px;
@@ -222,6 +356,13 @@
 @keyframes SpringImageText2In {
   to {
     left: 240px;
+    opacity: 1;
+  }
+}
+
+@keyframes SpringImageText2InMobile {
+  to {
+    left: -30px;
     opacity: 1;
   }
 }
@@ -241,20 +382,38 @@
 }
 
 .spring-image-1-in {
-  bottom: 0px;
   opacity: 0;
   animation: SpringImage1In 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+
+  @include respond-to(mobile) {
+    bottom: 0%;
+    opacity: 0;
+    animation: SpringImage1InMobile 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+  }
 }
 
 .spring-image-1-out {
   bottom: 64px;
   opacity: 1;
   animation: SpringImage1Out 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  @include respond-to(mobile) {
+    bottom: 0%;
+    opacity: 0;
+    animation: SpringImage1Out 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+  }
 }
 
 @keyframes SpringImage1In {
   to {
     bottom: 64px;
+    opacity: 1;
+  }
+}
+
+@keyframes SpringImage1InMobile {
+  to {
+    bottom: 5%;
     opacity: 1;
   }
 }
@@ -270,17 +429,36 @@
   top: 0px;
   opacity: 0;
   animation: SpringImage2In 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+
+  @include respond-to(mobile) {
+    top: 40%;
+    opacity: 0;
+    animation: SpringImage2InMobile 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+  }
 }
 
 .spring-image-2-out {
   top: 64px;
   opacity: 1;
   animation: SpringImage2Out 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  @include respond-to(mobile) {
+    top: 45%;
+    opacity: 1;
+    animation: SpringImage2Out 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
 }
 
 @keyframes SpringImage2In {
   to {
     top: 64px;
+    opacity: 1;
+  }
+}
+
+@keyframes SpringImage2InMobile {
+  to {
+    top: 45%;
     opacity: 1;
   }
 }

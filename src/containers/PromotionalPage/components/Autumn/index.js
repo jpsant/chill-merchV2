@@ -2,7 +2,9 @@ import React from 'react';
 import './styles.scss';
 
 import AutumnImage1 from '../../../../assets/images/autumn-1.png';
+import AutumnImage1Mobile from '../../../../assets/images/autumn-1-mobile.png';
 import AutumnImage2 from '../../../../assets/images/autumn-2.png';
+import AutumnImage2Mobile from '../../../../assets/images/autumn-2-mobile.png';
 
 import AutumnLeaf from '../../../../assets/svgs/autumn-leaf.svg';
 
@@ -30,6 +32,9 @@ export default function Autumn({ language, currentPage, currentSection }) {
         <img className={currentPage === 1 && currentSection === 2 ?
           'autumn-imageContainer__image1 autumn-image-1-in' :
           'autumn-imageContainer__image1 autumn-image-1-out'} src={AutumnImage1} alt="autumn 1" />
+          <img className={currentPage === 1 && currentSection === 2 ?
+          'autumn-imageContainer__image1-mobile autumn-image-1-in' :
+          'autumn-imageContainer__image1-mobile autumn-image-1-out'} src={AutumnImage1Mobile} alt="autumn 1" />
         <div className={currentPage === 1 & currentSection === 2 ?
           'autumn-imageContainer__text1 autumn-image-text-1-in' :
           'autumn-imageContainer__text1 autumn-image-text-1-out'}>
@@ -39,6 +44,9 @@ export default function Autumn({ language, currentPage, currentSection }) {
         <img className={currentPage === 1 && currentSection === 2 ?
           'autumn-imageContainer__image2 autumn-image-2-in' :
           'autumn-imageContainer__image2 autumn-image-2-out'} src={AutumnImage2} alt="autumn 2" />
+          <img className={currentPage === 1 && currentSection === 2 ?
+          'autumn-imageContainer__image2-mobile autumn-image-2-in' :
+          'autumn-imageContainer__image2-mobile autumn-image-2-out'} src={AutumnImage2Mobile} alt="autumn 2" />
         <div className={currentPage === 1 && currentSection === 2 ?
           'autumn-imageContainer__text2 autumn-image-text-2-in' :
           'autumn-imageContainer__text2 autumn-image-text-2-out'}>
