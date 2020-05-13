@@ -216,7 +216,7 @@
         margin: 0;
         font-size: 16px;
         opacity: 70%;
-        font-weight: 200px;
+        font-weight: 200;
 
         @include respond-to(medium) {
           font-size: 12px;
@@ -247,7 +247,7 @@
 
       @include respond-to(mobile) {
         opacity: 0;
-        transform: translateX(50%); //transform to -10
+        transform: translateX(50%);
         width: auto;
         top: 110px;
       }
@@ -272,7 +272,7 @@
         margin: 0;
         font-size: 16px;
         opacity: 70%;
-        font-weight: 200px;
+        font-weight: 200;
 
         @include respond-to(medium) {
           font-size: 12px;
