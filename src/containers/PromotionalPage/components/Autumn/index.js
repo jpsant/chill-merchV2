@@ -38,8 +38,8 @@ export default function Autumn({ language, currentPage, currentSection }) {
         <div className={currentPage === 1 & currentSection === 2 ?
           'autumn-imageContainer__text1 autumn-image-text-1-in' :
           'autumn-imageContainer__text1 autumn-image-text-1-out'}>
-          <h1>Lorem Ipsum Damet</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h2>
+          <h1>Lorem Ipsum</h1>
+          <h2>example lotem damet asbterco limtel.</h2>
         </div>
         <img className={currentPage === 1 && currentSection === 2 ?
           'autumn-imageContainer__image2 autumn-image-2-in' :
@@ -50,8 +50,8 @@ export default function Autumn({ language, currentPage, currentSection }) {
         <div className={currentPage === 1 && currentSection === 2 ?
           'autumn-imageContainer__text2 autumn-image-text-2-in' :
           'autumn-imageContainer__text2 autumn-image-text-2-out'}>
-          <h1>Lorem Ipsum Damet</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h2>
+          <h1>Lorem Ipsum</h1>
+          <h2>example lotem damet asbterco limtel.</h2>
         </div>
       </div>
     </div>

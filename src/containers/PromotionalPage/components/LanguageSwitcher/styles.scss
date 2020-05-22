@@ -28,6 +28,7 @@
 
     @include respond-to(mobile) {
       display: block;
+      width: 100px;
     }
   }
 
@@ -60,8 +61,8 @@
     @include respond-to(mobile) {
       width: 41.69px;
       height: 42.04px;
-      top: 32px;
-      right: 34px;
+      top: 28px;
+      right: 31px;
     }
   }
 
@@ -93,9 +94,9 @@
 
     @include respond-to(mobile) {
       right: 14px;
-      top: 108px;
-      width: 82px;
-      height: 192px;
+      top: 98px;
+      width: 72px;
+      height: 172px;
       flex-direction: column;
     }
 
@@ -110,7 +111,7 @@
 
       @include respond-to(mobile) {
         margin-right: 0px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         width: 58.28px;
         height: 37.64px;
       }

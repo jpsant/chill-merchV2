@@ -14,7 +14,7 @@ import BearLogo from '../../assets/svgs/Bear.svg';
 import './styles.scss';
 
 class PromotionalPage extends Component {
-
+  
   state = {
     currentPage: 0,
     currentLanguage: 'english',

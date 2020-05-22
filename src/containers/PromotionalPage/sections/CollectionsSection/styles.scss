@@ -31,21 +31,34 @@
 
   &__carousel {
     z-index: 999;
-    height: 100%;
+    top: -10px;
     width: 100%;
-    top: 50%;
-    transform: translateY(-40%);
 
-    @include respond-to(mobile) {
-      transform: translateY(-35%);
+    @include respond-to(mobile-medium) {
+      width: 100%;
+      top: -35px;
     }
   }
 }
 
 .carousel-item {
-  margin: -10px;
+  transform: translateX(30px);
+  
+  @include respond-to(mobile) {
+    transform: translateX(51px);
+  }
+}
+
+.react-multiple-carousel__arrow--left {
 
   @include respond-to(mobile) {
-    margin: 33px;
+    left: calc(1% + 1px) !important;
+  }
+}
+
+.react-multiple-carousel__arrow--right {
+
+  @include respond-to(mobile) {
+    right: calc(1% + 1px) !important;
   }
 }

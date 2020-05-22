@@ -125,6 +125,11 @@
         top: 42%;
         left: -10px;
       }
+
+      @include respond-to(mobile-medium) {
+        width: 200px;
+        left: 10px;
+      }
     }
 
     &__image2 {
@@ -146,6 +151,11 @@
         bottom: 2%;
         right: -10px;
       }
+
+      @include respond-to(mobile-medium) {
+        width: 200px;
+        right: 10px;
+      }
     }
 
     &__text1 {
@@ -163,6 +173,10 @@
       @include respond-to(mobile) {
         transform: translateX(0);
         top: 50%;
+      }
+
+      @include respond-to(mobile-medium) {
+        margin-right: 8px;
       }
 
       h1 {
@@ -183,7 +197,7 @@
         font-family: "Roboto Light";
         margin: 0;
         font-size: 16px;
-        opacity: 70%;
+        opacity: 0.7;
         font-weight: 200;
         width: 225px;
 
@@ -216,6 +230,10 @@
         top: 110px;
       }
 
+      @include respond-to(mobile-medium) {
+        margin-left: 8px;
+      }
+
       h1 {
         margin: 0;
         font-family: "Roboto Regular";
@@ -234,7 +252,7 @@
         font-family: "Roboto Light";
         margin: 0;
         font-size: 16px;
-        opacity: 70%;
+        opacity: 0.7;
         font-weight: 200;
         width: 225px;
 

@@ -22,7 +22,7 @@ export default function CollectionstSection({ season, language }) {
         min: 1024
       },
       items: 4,
-      partialVisibilityGutter: 40
+      slidesToSlide: 3
     },
     tablet: {
       breakpoint: {
@@ -30,12 +30,12 @@ export default function CollectionstSection({ season, language }) {
         min: 464
       },
       items: 2,
-      partialVisibilityGutter: 30
+      slidesToSlide: 2
     },
     mobile: {
       breakpoint: {
-        max: 550,
-        min: 250
+        max: 464,
+        min: 0
       },
       items: 1,
     },
@@ -51,21 +51,50 @@ export default function CollectionstSection({ season, language }) {
       }}>
       <h1 className="collectionsSectionContainer-h1">{language === 'english' ? 'For all the Occasions' : 'Para todas as Ocasiões'}</h1>
       <Carousel
-        centerMode
+        additionalTransfrom={0}
         arrows
-        autoPlay={true}
         autoPlaySpeed={3000}
+        centerMode={false}
         className="collectionsSectionContainer__carousel"
         containerClass="container-with-dots"
+        dotListClass=""
+        draggable
         focusOnSelect={false}
         infinite
         itemClass="carousel-item"
         keyBoardControl
         minimumTouchDrag={80}
-        responsive={responsive}
+        renderButtonGroupOutside={false}
+        renderDotsOutside={false}
+        responsive={{
+          desktop: {
+            breakpoint: {
+              max: 3000,
+              min: 1024
+            },
+            items: 4,
+            slidesToSlide: 3
+          },
+          tablet: {
+            breakpoint: {
+              max: 1024,
+              min: 464
+            },
+            items: 2,
+            slidesToSlide: 2
+          },
+          mobile: {
+            breakpoint: {
+              max: 464,
+              min: 0
+            },
+            items: 1,
+          },
+        }}
         showDots={false}
-        transitionDuration={600}
+        sliderClass=""
         slidesToSlide={1}
+        swipeable
       >
         <Card language={language} title={language === 'english' ? 'Casual Choise' : 'Escolha Casual'} BGColor="#114566" image={image1} />
         <Card language={language} title={language === 'english' ? 'Sunday Morning' : 'Doming de Manhã'} BGColor="#954930" image={image2} />

@@ -133,9 +133,9 @@
       @include respond-to(mobile) {
         display: block;
         opacity: 1;
-        width: 202px;
+        width: 180px;
         top: 35%;
-        opacity: 0;
+        left: 15px;
       }
     }
 
@@ -172,8 +172,9 @@
       @include respond-to(mobile) {
         display: block;
         opacity: 0;
-        width: 202px;
+        width: 180px;
         top: 82%;
+        transform: translate(90%, -40%);
       }
     }
 
@@ -215,7 +216,7 @@
         font-family: "Roboto Light";
         margin: 0;
         font-size: 16px;
-        opacity: 70%;
+        opacity: 0.7;
         font-weight: 200;
 
         @include respond-to(medium) {
@@ -271,7 +272,7 @@
         font-family: "Roboto Light";
         margin: 0;
         font-size: 16px;
-        opacity: 70%;
+        opacity: 0.7;
         font-weight: 200;
 
         @include respond-to(medium) {
@@ -314,7 +315,7 @@
 
   @include respond-to(mobile) {
     top: 82%;
-    oapcity: 0;
+    opacity: 0;
     animation: summerImageAnimation2InMobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
   }
 }
@@ -376,6 +377,12 @@
     opacity: 0;
     animation: summerImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
   }
+
+  @include respond-to(mobile-medium) {
+    opacity: 0;
+    animation: summerImageTextAnimation1InSmall 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+  }
+  
 }
 
 .summer-text-image-1-out {
@@ -409,6 +416,13 @@
   }
 }
 
+@keyframes summerImageTextAnimation1InSmall {
+  to {
+    transform: translateX(-10%);
+    opacity: 1;
+  }
+}
+
 @keyframes summerImageTextAnimation1Out {
   to {
     transform: translateX(-35%);
@@ -425,7 +439,7 @@
 
 @keyframes summerImageTextAnimation2InMobile {
   to {
-    transform: translateX(-10%);
+    transform: translateX(0%);
     opacity: 1;
   }
 }

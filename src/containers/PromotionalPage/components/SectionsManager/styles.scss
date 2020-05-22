@@ -27,6 +27,11 @@
         left: 19%;
         transform: translateX(-50%);
       }
+
+      @include respond-to(mobile-medium) {
+        width: 60px;
+        top: 28%;
+      }
     }
   }
 }
@@ -59,6 +64,11 @@
         right: 19%;
         transform: translateX(-50%);
       }
+
+      @include respond-to(mobile-medium) {
+        width: 60px;
+        top: 28%;
+      }
     }
   }
 }
@@ -66,12 +76,14 @@
 .left-button-in {
   transform: translateX(-110%);
   opacity: 0;
+  visibility: hidden;
   animation: leftButtonIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
 }
 
 .left-button-out {
-  opacity: 1;
   transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
   animation: leftButtonOut 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -79,6 +91,7 @@
   to {
     transform: translateX(0%);
     opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -86,18 +99,21 @@
   to {
     transform: translateX(-110%);
     opacity: 0;
+    visibility: hidden;
   }
 }
 
 .right-button-in {
   transform: translateX(110%);
   opacity: 0;
+  visibility: hidden;
   animation: rightButtonIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
 }
 
 .right-button-out {
-  opacity: 1;
   transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
   animation: rightButtonOut 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -105,6 +121,7 @@
   to {
     transform: translateX(0%);
     opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -112,5 +129,6 @@
   to {
     transform: translateX(110%);
     opacity: 0;
+    visibility: hidden;
   }
 }
