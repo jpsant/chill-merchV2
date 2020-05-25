@@ -31,7 +31,7 @@
       opacity: 0;
 
       @include respond-to(mobile) {
-        font-size: 60px;
+        font-size: 55px;
         width: 327px;
       }
     }
@@ -165,7 +165,7 @@
       color: white;
 
       @include respond-to(mobile) {
-        font-size: 25px;
+        font-size: 22px;
       }
     }
 
