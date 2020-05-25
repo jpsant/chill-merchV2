@@ -2,12 +2,14 @@ import React from 'react';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import './styles.scss';
 
+import SectionsManager from '../../components/SectionsManager';
+
 import Winter from '../../components/Winter';
 import Spring from '../../components/Spring';
 import Autumn from '../../components/Autumn';
 import Summer from '../../components/Summer';
 
-export default function SeasonsSection({ currentPage, currentSection, language }) {
+export default function SeasonsSection({ currentPage, currentSection, language, handleSection }) {
   return (
     <div className="seasonSectionContainer"
       style={{
@@ -16,6 +18,7 @@ export default function SeasonsSection({ currentPage, currentSection, language }
             currentSection === 2 ? '#EA8C5C' :
               currentSection === 3 ? '#E9C02E' : '#6291AF'
       }}>
+      <SectionsManager currentSection={currentSection} changeSection={(number) => handleSection(number)} currentPage={currentPage} />
       <SwitchTransition>
         <CSSTransition
           timeout={300}
