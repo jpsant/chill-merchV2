@@ -1,0 +1,71 @@
+@import '../../../../mixins/mixins.scss';
+
+.mobileFullScreenContainer {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  background-color: #6291af;
+  color: white;
+  transition: all .5 ease-in-out;
+  opacity: 1;
+  visibility: visible;
+  font-family: 'Roboto Regular';
+
+  &-title {
+    font-family: 'Lobster Regular';
+    font-size: 70px !important;
+    font-weight: 400 !important;
+  }
+
+  &-bear {
+    width: 150px;
+    margin: 32px 0;
+  }
+
+  h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 15px;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  button {
+    font-family: "Lobster Regular";
+    width: 385px;
+    height: 81px;
+    background-color: white;
+    color: #4795bc;
+    border: none;
+    border-radius: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-top: 22px;
+
+    @include respond-to(mobile) {
+      width: 267px;
+      height: 57px;
+      font-size: 30px;
+    }
+  }
+
+  button:hover {
+    color: white !important;
+    background: transparent;
+    border: 2px solid white;
+  }
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
