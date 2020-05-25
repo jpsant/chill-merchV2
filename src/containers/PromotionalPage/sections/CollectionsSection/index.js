@@ -13,7 +13,7 @@ import image4 from '../../../../assets/images/card-4.png';
 import image5 from '../../../../assets/images/card-5.png';
 import image6 from '../../../../assets/images/card-6.png';
 
-export default function CollectionstSection({ season, language }) {
+export default function CollectionstSection({ season, language, currentPage }) {
 
   const responsive = {
     desktop: {
@@ -49,13 +49,16 @@ export default function CollectionstSection({ season, language }) {
             season === 2 ? "#EA8C5C" :
               season === 3 ? "#E9C02E" : "#6291AF"
       }}>
-      <h1 className="collectionsSectionContainer-h1">{language === 'english' ? 'For all the Occasions' : 'Para todas as Ocasiões'}</h1>
+      <h1 className={currentPage === 2 ? 'collectionsSectionContainer-h1 collections-title-in' : 
+        'collectionsSectionContainer-h1'}>
+        {language === 'english' ? 'For all the Occasions' : 'Para todas as Ocasiões'}
+      </h1>
       <Carousel
         additionalTransfrom={0}
         arrows
         autoPlaySpeed={3000}
         centerMode={false}
-        className="collectionsSectionContainer__carousel"
+        className={currentPage === 2 ? 'collectionsSectionContainer__carousel collections-corousel-in' : 'collectionsSectionContainer__carousel'}
         containerClass="container-with-dots"
         dotListClass=""
         draggable
@@ -66,35 +69,11 @@ export default function CollectionstSection({ season, language }) {
         minimumTouchDrag={80}
         renderButtonGroupOutside={false}
         renderDotsOutside={false}
-        responsive={{
-          desktop: {
-            breakpoint: {
-              max: 3000,
-              min: 1024
-            },
-            items: 4,
-            slidesToSlide: 3
-          },
-          tablet: {
-            breakpoint: {
-              max: 1024,
-              min: 464
-            },
-            items: 2,
-            slidesToSlide: 2
-          },
-          mobile: {
-            breakpoint: {
-              max: 464,
-              min: 0
-            },
-            items: 1,
-          },
-        }}
+        responsive={responsive}
         showDots={false}
         sliderClass=""
         slidesToSlide={1}
-        swipeable
+        swipeable={false}
       >
         <Card language={language} title={language === 'english' ? 'Casual Choise' : 'Escolha Casual'} BGColor="#114566" image={image1} />
         <Card language={language} title={language === 'english' ? 'Sunday Morning' : 'Doming de Manhã'} BGColor="#954930" image={image2} />

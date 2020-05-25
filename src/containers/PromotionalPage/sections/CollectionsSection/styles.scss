@@ -1,21 +1,23 @@
-@import '../../../../mixins/mixins.scss';
+@import "../../../../mixins/mixins.scss";
 
 .collectionsSectionContainer {
   position: relative;
-  height: 100%;
-  background: #6291AF;
+  height: 100vh;
+  background: #6291af;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   color: white;
+  margin: 0;
 
   &-h1 {
     position: absolute;
-    top: 32px;
+    top: 0px;
+    opacity: 0;
     font-size: 95px;
     font-weight: 400;
-    font-family: 'Lobster Regular';
-    margin: 0;  
+    font-family: "Lobster Regular";
+    margin: 0;
 
     @include respond-to(medium) {
       top: 7px;
@@ -23,42 +25,87 @@
     }
 
     @include respond-to(mobile) {
-      font-size: 65px;
-      top: 105px;
+      font-size: 63px;
+      top: 50px;
+      opacity: 0;
       line-height: 70px;
     }
   }
 
   &__carousel {
     z-index: 999;
-    top: -10px;
+    top: 10px;
+    opacity: 0;
     width: 100%;
 
     @include respond-to(mobile-medium) {
       width: 100%;
-      top: -35px;
+      top: 15px;
+      opacity: 0;
     }
   }
 }
 
 .carousel-item {
   transform: translateX(30px);
-  
+
   @include respond-to(mobile) {
-    transform: translateX(51px);
+    transform: translateX(53px);
   }
 }
 
 .react-multiple-carousel__arrow--left {
-
   @include respond-to(mobile) {
     left: calc(1% + 1px) !important;
   }
 }
 
 .react-multiple-carousel__arrow--right {
-
   @include respond-to(mobile) {
     right: calc(1% + 1px) !important;
+  }
+}
+
+.collections-title-in {
+  animation: CollectionsTitleIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .3s;
+
+  @include respond-to(mobile-medium) {
+    animation: CollectionsTitleInMobile 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .3s;
+  }
+}
+
+.collections-corousel-in {
+  animation: CollectionsCarouselIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .6s;
+
+  @include respond-to(mobile-medium) {
+    animation: CollectionsCarouselInMobile 1s cubic-bezier(0.22, 1, 0.36, 1) forwards .6s;
+  }
+}
+
+@keyframes CollectionsTitleIn {
+  to {
+    top: 32px;
+    opacity: 1;
+  }
+}
+
+@keyframes CollectionsTitleInMobile {
+  to {
+    top: 95px;
+    opacity: 1;
+  }
+}
+
+@keyframes CollectionsCarouselIn {
+  to {
+    top: -10px;
+    opacity: 1;
+  }
+}
+
+@keyframes CollectionsCarouselInMobile {
+  to {
+    top: -15px;
+    opacity: 1;
   }
 }
