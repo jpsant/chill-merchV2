@@ -13,7 +13,6 @@ import Pagination from './components/Pagination';
 import MobileFullScreen from './components/MobileFullscreen';
 
 import BearLogo from '../../assets/svgs/Bear.svg';
-
 import './styles.scss';
 
 class PromotionalPage extends Component {
@@ -57,11 +56,10 @@ class PromotionalPage extends Component {
 
   render() {
     let example = this.state.device === 'mobile' ?
-      <MobileFullScreen language={this.state.currentLanguage} hide={this.state.isFull} setFull={() => this.setState({isFull: true})} /> : null
+      <MobileFullScreen language={this.state.currentLanguage} hide={this.state.isFull} setFull={() => this.setState({ isFull: true })} /> : null
     return (
       <>
-        <Fullscreen
-          enabled={this.state.isFull}>
+        <Fullscreen enabled={this.state.isFull}>
           {example}
           <img className="BearLogo" src={BearLogo} alt="Bear Logo"
             style={{ opacity: this.state.currentPage === 1 ? 1 : this.state.currentPage === 2 ? 1 : 0 }} />
