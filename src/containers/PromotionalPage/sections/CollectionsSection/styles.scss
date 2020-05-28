@@ -3,7 +3,6 @@
 .collectionsSectionContainer {
   position: relative;
   height: 100vh;
-  background: #6291af;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -50,7 +49,7 @@
   transform: translateX(30px);
 
   @include respond-to(mobile) {
-    transform: translateX(53px);
+    transform: translateX(0px);
   }
 }
 

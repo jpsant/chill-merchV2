@@ -1,8 +1,9 @@
 import React from 'react';
 import './styles.scss';
-
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+
+import ParticlesBackground from '../../components/ParticlesContainer';
 
 import Card from '../../components/CollectionCard';
 
@@ -37,51 +38,48 @@ export default function CollectionstSection({ season, language, currentPage }) {
         max: 464,
         min: 0
       },
-      items: 1,
+      items: .5,
     },
   }
 
   return (
-    <div className="collectionsSectionContainer"
-      style={{
-        background: season === 0 ? "#6291AF" :
-          season === 1 ? "#D46B7A" :
-            season === 2 ? "#EA8C5C" :
-              season === 3 ? "#E9C02E" : "#6291AF"
-      }}>
-      <h1 className={currentPage === 2 ? 'collectionsSectionContainer-h1 collections-title-in' : 
-        'collectionsSectionContainer-h1'}>
-        {language === 'english' ? 'For all the Occasions' : 'Para todas as Ocasiões'}
-      </h1>
-      <Carousel
-        additionalTransfrom={0}
-        arrows
-        autoPlaySpeed={3000}
-        centerMode={false}
-        className={currentPage === 2 ? 'collectionsSectionContainer__carousel collections-corousel-in' : 'collectionsSectionContainer__carousel'}
-        containerClass="container-with-dots"
-        dotListClass=""
-        draggable
-        focusOnSelect={false}
-        infinite
-        itemClass="carousel-item"
-        keyBoardControl
-        minimumTouchDrag={80}
-        renderButtonGroupOutside={false}
-        renderDotsOutside={false}
-        responsive={responsive}
-        showDots={false}
-        sliderClass=""
-        slidesToSlide={1}
-        swipeable={false}
-      >
-        <Card language={language} title={language === 'english' ? 'Casual Choise' : 'Escolha Casual'} BGColor="#114566" image={image1} />
-        <Card language={language} title={language === 'english' ? 'Sunday Morning' : 'Doming de Manhã'} BGColor="#954930" image={image2} />
-        <Card language={language} title={language === 'english' ? 'Morning Wakeup' : 'Café da manhã'} BGColor="#254F55" image={image3} />
-        <Card language={language} title={language === 'english' ? 'Workout Time!' : 'Hora de Suar!'} BGColor="#273944" image={image4} />
-        <Card language={language} title={language === 'english' ? 'Winter Collection' : 'Coleção de inverno'} BGColor="#327773" image={image5} />
-        <Card language={language} title={language === 'english' ? 'Player 1 Start!' : 'Jogador Nº 1'} BGColor="#9B041F" image={image6} />
-      </Carousel>
-    </div>
+    <>
+    <ParticlesBackground season={season} />
+      <div className="collectionsSectionContainer">
+        <h1 className={currentPage === 2 ? 'collectionsSectionContainer-h1 collections-title-in' :
+          'collectionsSectionContainer-h1'}>
+          {language === 'english' ? 'For all the Occasions' : 'Para todas as Ocasiões'}
+        </h1>
+        <Carousel
+          additionalTransfrom={0}
+          arrows
+          autoPlaySpeed={3000}
+          centerMode={true}
+          className={currentPage === 2 ? 'collectionsSectionContainer__carousel collections-corousel-in' : 'collectionsSectionContainer__carousel'}
+          containerClass="container-with-dots"
+          dotListClass=""
+          draggable
+          focusOnSelect={false}
+          infinite
+          itemClass="carousel-item"
+          keyBoardControl
+          minimumTouchDrag={80}
+          renderButtonGroupOutside={false}
+          renderDotsOutside={false}
+          responsive={responsive}
+          showDots={false}
+          sliderClass=""
+          slidesToSlide={1}
+          swipeable={false}
+        >
+          <Card language={language} title={language === 'english' ? 'Casual Choise' : 'Escolha Casual'} BGColor="#114566" image={image1} />
+          <Card language={language} title={language === 'english' ? 'Sunday Morning' : 'Doming de Manhã'} BGColor="#954930" image={image2} />
+          <Card language={language} title={language === 'english' ? 'Morning Wakeup' : 'Café da manhã'} BGColor="#254F55" image={image3} />
+          <Card language={language} title={language === 'english' ? 'Workout Time!' : 'Hora de Suar!'} BGColor="#273944" image={image4} />
+          <Card language={language} title={language === 'english' ? 'Winter Collection' : 'Coleção de inverno'} BGColor="#327773" image={image5} />
+          <Card language={language} title={language === 'english' ? 'Player 1 Start!' : 'Jogador Nº 1'} BGColor="#9B041F" image={image6} />
+        </Carousel>
+      </div>
+    </>
   )
 }

@@ -3,7 +3,6 @@
 .contactSectionContainer {
   position: relative;
   height: 100vh;
-  background: #6291af;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +10,6 @@
 
   @include respond-to(mobile) {
     flex-direction: column;
-    padding-top: 32px;
   }
 
   &__visit {
@@ -33,6 +31,7 @@
       @include respond-to(mobile) {
         font-size: 55px;
         width: 327px;
+        padding-top: 30px;
       }
     }
 

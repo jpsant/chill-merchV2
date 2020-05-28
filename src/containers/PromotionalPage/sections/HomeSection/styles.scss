@@ -2,12 +2,12 @@
 
 .homeSectionContainer {
   height: 100vh;
-  background: #6291AF;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  z-index: 9999 !important;
 
   @include respond-to(medium) {
     &__logo {

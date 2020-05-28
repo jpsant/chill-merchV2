@@ -2,20 +2,16 @@ import React from 'react';
 import './styles.scss';
 
 import MainLogo from '../../../../assets/svgs/main-logo.svg';
+import ParticlesBackground from '../../components/ParticlesContainer';
 
-export default function HomeSection({ season, language }) {
+export default function HomeSection({ language, season }) {
   return (
-    <div className="homeSectionContainer"
-      style={{
-        background: season === 0 ? "#6291AF" :
-          season === 1 ? "#D46B7A" :
-            season === 2 ? "#EA8C5C" :
-              season === 3 ? "#E9C02E" : "#6291AF"
-      }}>
+    <div className="homeSectionContainer">
       <img className="homeSectionContainer__logo" src={MainLogo} alt="" />
       <h2 className="homeSectionContainer__description">
         {language === 'english' ? 'The Chillest fictional merch on the World!' : 'A Marca de roupas mais tranquila do Mundo!'}
       </h2>
+      <ParticlesBackground season={season} />
     </div>
   )
 }
