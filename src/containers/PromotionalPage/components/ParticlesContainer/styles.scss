@@ -1,0 +1,19 @@
+@import "../../../../mixins/mixins.scss";
+
+.particlesContainer {
+  position: fixed;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+
+  @include respond-to(mobile-medium) {
+    height: 110vh;
+  }
+}
+
+.tsparticles-canvas-el {
+  @include respond-to(mobile) {
+    height: 100vmax !important;
+    width: 100vmax !important;
+  }
+}

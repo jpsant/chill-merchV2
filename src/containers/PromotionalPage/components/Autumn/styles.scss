@@ -231,7 +231,8 @@
         }
 
         @include respond-to(mobile) {
-          font-size: 9px;
+          font-size: 9.5px;
+          opacity: 0.9;
           width: 207px;
         }
       }
@@ -283,7 +284,8 @@
         }
 
         @include respond-to(mobile) {
-          font-size: 9px;
+          font-size: 9.5px;
+          opacity: 0.9;
           width: 207px;
         }
       }

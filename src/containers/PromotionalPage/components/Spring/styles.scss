@@ -228,8 +228,9 @@
         }
 
         @include respond-to(mobile) {
-          font-size: 9px;
+          font-size: 9.5px;
           width: 130px;
+          opacity: 0.9;
           text-align: right;
         }
       }
@@ -293,8 +294,9 @@
         }
 
         @include respond-to(mobile) {
-          font-size: 9px;
+          font-size: 9.5px;
           width: 130px;
+          opacity: 0.9;
         }
       }
     }
@@ -369,7 +371,7 @@
 
 @keyframes SpringImageText1InMobileSmall {
   to {
-    left: 6px;
+    left: 12px;
     opacity: 1;
   }
 }
