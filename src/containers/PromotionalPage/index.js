@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import UAParser from 'ua-parser-js';
-import ReactPageScroller from 'react-page-scroller';
 import Fullscreen from "react-full-screen";
+import ReactPageScroller from 'react-page-scroller';
 
 import HomeSection from './sections/HomeSection';
 import CollectionsSection from './sections/CollectionsSection';
@@ -73,6 +73,8 @@ class PromotionalPage extends Component {
           <ReactPageScroller
             pageOnChange={this.handlePageChange}
             customPageNumber={this.state.currentPage}
+            animationTimer={800}
+            animationTimerBuffer={40}
           >
             <HomeSection season={this.state.seasonsSection} currentPage={this.state.currentPage} language={this.state.currentLanguage} />
             <SeasonsSection handleSection={(number) => this.seasonsSectionHandler(number)} season={this.state.seasonsSection} currentSection={this.state.seasonsSection} currentPage={this.state.currentPage} language={this.state.currentLanguage} />

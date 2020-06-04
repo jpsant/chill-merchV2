@@ -97,6 +97,10 @@
     }
 
     @include respond-to(mobile) {
+      width: 409px;
+    }
+
+    @include respond-to(mobile-medium) {
       width: 363px;
     }
 
@@ -133,8 +137,13 @@
       @include respond-to(mobile) {
         display: block;
         opacity: 1;
-        width: 180px;
+        width: 210px;
         top: 35%;
+        left: 5px;
+      }
+
+      @include respond-to(mobile-medium) {
+        width: 180px;
         left: 15px;
       }
     }
@@ -172,8 +181,13 @@
       @include respond-to(mobile) {
         display: block;
         opacity: 0;
-        width: 180px;
+        width: 210px;
         top: 82%;
+        transform: translate(90%, -40%);
+      }
+
+      @include respond-to(mobile-medium) {
+        width: 180px;
         transform: translate(90%, -40%);
       }
     }
@@ -251,6 +265,10 @@
         opacity: 0;
         transform: translateX(50%);
         width: auto;
+        top: 125px;
+      }
+
+      @include respond-to(mobile-medium) {
         top: 110px;
       }
 
@@ -375,6 +393,11 @@
   opacity: 0;
   animation: summerImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
 
+  @include respond-to(medium) {
+    opacity: 0;
+    animation: summerImageTextAnimation1InMedium 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+  }
+
   @include respond-to(mobile) {
     opacity: 0;
     animation: summerImageTextAnimation1In 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
@@ -412,6 +435,13 @@
 }
 
 @keyframes summerImageTextAnimation1In {
+  to {
+    transform: translateX(-20%);
+    opacity: 1;
+  }
+}
+
+@keyframes summerImageTextAnimation1InMedium {
   to {
     transform: translateX(0%);
     opacity: 1;

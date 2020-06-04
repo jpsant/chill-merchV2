@@ -38,7 +38,7 @@ export default function CollectionstSection({ season, language, currentPage }) {
         max: 464,
         min: 0
       },
-      items: .5,
+      items: 1,
     },
   }
 
@@ -47,15 +47,14 @@ export default function CollectionstSection({ season, language, currentPage }) {
     <ParticlesBackground season={season} />
       <div className="collectionsSectionContainer">
         <h1 className={currentPage === 2 ? 'collectionsSectionContainer-h1 collections-title-in' :
-          'collectionsSectionContainer-h1'}>
+          'collectionsSectionContainer-h1 collections-title-out '}>
           {language === 'english' ? 'For all the Occasions' : 'Para todas as Ocasiões'}
         </h1>
         <Carousel
           additionalTransfrom={0}
           arrows
           autoPlaySpeed={3000}
-          centerMode={true}
-          className={currentPage === 2 ? 'collectionsSectionContainer__carousel collections-corousel-in' : 'collectionsSectionContainer__carousel'}
+          className={currentPage === 2 ? 'collectionsSectionContainer__carousel collections-corousel-in' : 'collectionsSectionContainer__carousel collections-carousel-out'}
           containerClass="container-with-dots"
           dotListClass=""
           draggable
