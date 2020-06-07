@@ -1,4 +1,4 @@
-@import '../../../../mixins/mixins.scss';
+@import "../../../../mixins/mixins.scss";
 
 .CollectionCard-container {
   width: 305px;
@@ -15,7 +15,7 @@
     width: 255px;
     height: 441px;
   }
-  
+
   &__image {
     width: 283px;
     height: 225px;
@@ -28,9 +28,9 @@
 
   &__texts {
     text-align: center;
-    font-family: 'Roboto Regular';
+    font-family: "Roboto Regular";
     width: 265px;
-    
+
     h1 {
       font-size: 32px;
       margin-bottom: 0;
@@ -39,7 +39,7 @@
         font-size: 29px !important;
       }
     }
-    
+
     h2 {
       font-weight: 400;
       font-size: 18px;

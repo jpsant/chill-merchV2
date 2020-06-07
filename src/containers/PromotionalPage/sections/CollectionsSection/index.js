@@ -35,10 +35,11 @@ export default function CollectionstSection({ season, language, currentPage }) {
     },
     mobile: {
       breakpoint: {
-        max: 464,
+        max: 500,
         min: 0
       },
       items: 1,
+      slidesToSlide: 1
     },
   }
 

@@ -23,12 +23,13 @@
   &-mobileLanguageSwitcherBG {
     display: none;
     position: fixed;
-    right: 4px;
-    top: 4px;
+    left: 0px;
+    top: 0px;
+    transition: all 0.3s;
 
     @include respond-to(mobile) {
       display: block;
-      width: 100px;
+      width: 110px;
     }
   }
 
@@ -38,7 +39,7 @@
     top: 32px;
     left: 24px;
     cursor: pointer;
-    
+
     @include respond-to(mobile) {
       display: block;
     }
@@ -61,12 +62,42 @@
     @include respond-to(mobile) {
       width: 41.69px;
       height: 42.04px;
-      top: 28px;
-      right: 31px;
+      top: 30px;
+      left: 34px;
+      visibility: hidden;
+    }
+  }
+
+  &-languageSwitcherFlagMobile {
+    position: fixed;
+    top: 12px;
+    right: 32px;
+    z-index: 99;
+    width: 86px;
+    cursor: pointer;
+    transition: all 0.3s;
+    visibility: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    @include respond-to(medium) {
+      width: 70px;
+    }
+
+    @include respond-to(mobile) {
+      width: 41.69px;
+      height: 42.04px;
+      top: 30px;
+      left: 34px;
+      visibility: visible;
     }
   }
 
   &-languageSwitcherFlag:hover {
+    transform: rotate(15deg);
+  }
+
+  &-languageSwitcherFlagMobile:hover {
     transform: rotate(15deg);
   }
 
@@ -93,9 +124,9 @@
     }
 
     @include respond-to(mobile) {
-      right: 14px;
+      left: 23px;
       top: 98px;
-      width: 72px;
+      width: 69px;
       height: 172px;
       flex-direction: column;
     }
@@ -132,4 +163,14 @@
       }
     }
   }
+}
+
+.languageSwitcherHide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.languageSwitcherShow {
+  opacity: 1;
+  visibility: visible;
 }

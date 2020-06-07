@@ -7,13 +7,13 @@
   width: 100vw;
 
   @include respond-to(mobile-medium) {
-    height: 110vh;
+    height: 101vh;
   }
 }
 
 .tsparticles-canvas-el {
   @include respond-to(mobile) {
-    height: 100vmax !important;
+    height: 105vmax !important;
     width: 100vmax !important;
   }
 }
