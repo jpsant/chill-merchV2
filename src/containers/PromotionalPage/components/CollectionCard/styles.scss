@@ -11,6 +11,11 @@
   border-radius: 20px;
   bottom: 0;
 
+  @include respond-to(high) {
+    width: 345px;
+    height: 515px;
+  }
+
   @include respond-to(medium) {
     width: 255px;
     height: 441px;
@@ -19,6 +24,11 @@
   &__image {
     width: 283px;
     height: 225px;
+
+    @include respond-to(high) {
+      width: 323px;
+      height: 265px;
+    }
 
     @include respond-to(medium) {
       width: 234px;
@@ -35,6 +45,10 @@
       font-size: 32px;
       margin-bottom: 0;
 
+      @include respond-to(high) {
+        font-size: 35px;
+      }
+
       @include respond-to(medium) {
         font-size: 29px !important;
       }
@@ -44,6 +58,10 @@
       font-weight: 400;
       font-size: 18px;
       margin: 28px 0;
+
+      @include respond-to(high) {
+        margin-top: 10px;
+      }
 
       @include respond-to(medium) {
         margin: 17px;
