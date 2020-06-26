@@ -28,6 +28,10 @@
       transform: translateY(-50%);
       opacity: 0;
 
+      @include respond-to(high) {
+        font-size: 110px;
+      }
+
       @include respond-to(medium) {
         font-size: 75px;
       }
@@ -44,6 +48,11 @@
       margin: 57px 0;
       transform: translateY(-50%);
       opacity: 0;
+
+      @include respond-to(high) {
+        width: 250px;
+        margin: 77px 0;
+      }
 
       @include respond-to(mobile) {
         width: 102.22px;
@@ -62,6 +71,12 @@
       font-size: 40px;
       cursor: pointer;
       transition: all 0.4s;
+
+      @include respond-to(high) {
+        font-size: 50px;
+        width: 445px;
+      height: 101px;
+      }
 
       @include respond-to(mobile) {
         width: 267px;
