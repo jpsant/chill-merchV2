@@ -1,34 +1,59 @@
-import React from 'react';
-import { SwitchTransition, CSSTransition } from 'react-transition-group';
-import './styles.scss';
+import React from "react";
+import { SwitchTransition, CSSTransition } from "react-transition-group";
+import "./styles.scss";
 
-import SectionsManager from '../../components/SectionsManager';
+import SectionsManager from "../../components/SectionsManager";
 
-import Winter from '../../components/Winter';
-import Spring from '../../components/Spring';
-import Autumn from '../../components/Autumn';
-import Summer from '../../components/Summer';
+import Winter from "../../components/Winter";
+import Spring from "../../components/Spring";
+import Autumn from "../../components/Autumn";
+import Summer from "../../components/Summer";
 
-import ParticlesBackground from '../../components/ParticlesContainer';
+import ParticlesBackground from "../../components/ParticlesContainer";
 
-export default function SeasonsSection({ currentPage, currentSection, language, handleSection }) {
+export default function SeasonsSection({
+  currentPage,
+  currentSection,
+  language,
+  handleSection,
+}) {
+  let seasons = [
+    <Winter
+      language={language}
+      currentSection={currentSection}
+      currentPage={currentPage}
+    />,
+    <Spring
+      language={language}
+      currentSection={currentSection}
+      currentPage={currentPage}
+    />,
+    <Autumn
+      language={language}
+      currentSection={currentSection}
+      currentPage={currentPage}
+    />,
+    <Summer
+      language={language}
+      currentSection={currentSection}
+      currentPage={currentPage}
+    />,
+  ];
   return (
     <>
-    <ParticlesBackground season={currentSection} />
+      <ParticlesBackground season={currentSection} />
       <div className="seasonSectionContainer">
-        <SectionsManager currentSection={currentSection} changeSection={(number) => handleSection(number)} currentPage={currentPage} />
+        <SectionsManager
+          currentSection={currentSection}
+          changeSection={(number) => handleSection(number)}
+          currentPage={currentPage}
+        />
         <SwitchTransition>
-          <CSSTransition
-            timeout={300}
-            classNames='fade'
-            key={currentSection}>
-            {currentSection === 0 ? <Winter language={language} currentSection={currentSection} currentPage={currentPage} /> :
-              currentSection === 1 ? <Spring language={language} currentSection={currentSection} currentPage={currentPage} /> :
-                currentSection === 2 ? <Autumn language={language} currentSection={currentSection} currentPage={currentPage} /> :
-                  currentSection === 3 ? <Summer language={language} currentSection={currentSection} currentPage={currentPage} /> : null}
+          <CSSTransition timeout={300} classNames="fade" key={currentSection}>
+            {seasons[currentSection]}
           </CSSTransition>
         </SwitchTransition>
       </div>
     </>
-  )
+  );
 }

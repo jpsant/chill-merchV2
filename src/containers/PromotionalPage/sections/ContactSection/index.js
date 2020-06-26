@@ -15,6 +15,8 @@ import SummerSend from "../../../../assets/svgs/summer-send.svg";
 
 import ParticlesBackground from "../../components/ParticlesContainer";
 
+import Languages from '../../../../multiLanguages/languages';
+
 export default function ContactSection({ currentPage, season, language }) {
   function submitFormHandler(e) {
     e.preventDefault();
