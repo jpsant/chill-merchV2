@@ -8,6 +8,8 @@ import AutumnImage2Mobile from "../../../../assets/images/autumn-2-mobile.png";
 
 import AutumnLeaf from "../../../../assets/svgs/autumn-leaf.svg";
 
+import Languages from '../../../../multiLanguages/language';
+
 export default function Autumn({ language, currentPage, currentSection }) {
   return (
     <div className="autumn">
@@ -20,7 +22,7 @@ export default function Autumn({ language, currentPage, currentSection }) {
                 : "autumn-titleContainer-text-h1 logo-text-out"
             }
           >
-            {language === "english" ? "Autumn" : "Outono"}
+            {Languages[language].seasons.autumn.title}
           </h1>
           <h2
             className={
@@ -29,9 +31,7 @@ export default function Autumn({ language, currentPage, currentSection }) {
                 : "autumn-titleContainer-text-h2 logo-text-out"
             }
           >
-            {language === "english"
-              ? "The Season to fall in Love."
-              : "A Estação para cair de amores."}
+            {Languages[language].seasons.autumn.subTitle}
           </h2>
         </div>
         <img
@@ -70,8 +70,8 @@ export default function Autumn({ language, currentPage, currentSection }) {
               : "autumn-imageContainer__text1 autumn-image-text-1-out"
           }
         >
-          <h1>Lorem Ipsum</h1>
-          <h2>example lotem damet asbterco limtel.</h2>
+          <h1>{Languages[language].seasons.autumn.text1.h1}</h1>
+          <h2>{Languages[language].seasons.autumn.text1.h2}</h2>
         </div>
         <img
           className={
@@ -98,8 +98,8 @@ export default function Autumn({ language, currentPage, currentSection }) {
               : "autumn-imageContainer__text2 autumn-image-text-2-out"
           }
         >
-          <h1>Lorem Ipsum</h1>
-          <h2>example lotem damet asbterco limtel.</h2>
+          <h1>{Languages[language].seasons.autumn.text2.h1}</h1>
+          <h2>{Languages[language].seasons.autumn.text2.h2}</h2>
         </div>
       </div>
     </div>

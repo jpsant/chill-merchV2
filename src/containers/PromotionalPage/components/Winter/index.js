@@ -6,6 +6,8 @@ import WinterImage2 from "../../../../assets/images/winter-2.png";
 
 import Snow from "../../../../assets/svgs/snow.svg";
 
+import Languages from '../../../../multiLanguages/language';
+
 export default function Winter({ language, currentPage, currentSection }) {
   return (
     <div className="winter">
@@ -18,7 +20,7 @@ export default function Winter({ language, currentPage, currentSection }) {
                 : "winter-titleContainer-text-h1 logo-text-out"
             }
           >
-            {language === "english" ? "Winter" : "Inverno"}
+            {Languages[language].seasons.winter.title}
           </h1>
           <h2
             className={
@@ -27,9 +29,7 @@ export default function Winter({ language, currentPage, currentSection }) {
                 : "winter-titleContainer-text-h2 logo-text-out"
             }
           >
-            {language === "english"
-              ? "Say Hello to the cold days!"
-              : "Diga Olá para os dias frios!"}
+            {Languages[language].seasons.winter.subTitle}
           </h2>
         </div>
         <img
@@ -59,8 +59,8 @@ export default function Winter({ language, currentPage, currentSection }) {
               : "winter-imageContainer__text1 logo-text-out"
           }
         >
-          <h1>Lorem Ipsum</h1>
-          <h2>example lotem damet asbterco limtel.</h2>
+          <h1>{Languages[language].seasons.winter.text1.h1}</h1>
+          <h2>{Languages[language].seasons.winter.text1.h2}</h2>
         </div>
         <img
           className={
@@ -78,8 +78,8 @@ export default function Winter({ language, currentPage, currentSection }) {
               : "winter-imageContainer__text2 logo-text-out"
           }
         >
-          <h1>Lorem Ipsum</h1>
-          <h2>example lotem damet asbterco limtel.</h2>
+          <h1>{Languages[language].seasons.winter.text2.h1}</h1>
+          <h2>{Languages[language].seasons.winter.text2.h2}</h2>
         </div>
       </div>
     </div>

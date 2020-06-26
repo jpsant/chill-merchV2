@@ -8,6 +8,8 @@ import SummerImage2Mobile from "../../../../assets/images/summer-2-mobile.png";
 
 import Sun from "../../../../assets/svgs/sun.svg";
 
+import Languages from '../../../../multiLanguages/language';
+
 export default function Summer({ currentPage, currentSection, language }) {
   return (
     <div className="summer">
@@ -20,7 +22,7 @@ export default function Summer({ currentPage, currentSection, language }) {
                 : "summer-titleContainer-text-h1 logo-text-out"
             }
           >
-            {language === "english" ? "Summer" : "Verão"}
+            {Languages[language].seasons.summer.title}
           </h1>
           <h2
             className={
@@ -29,7 +31,7 @@ export default function Summer({ currentPage, currentSection, language }) {
                 : "summer-titleContainer-text-h2 logo-text-out"
             }
           >
-            {language === "english" ? "Beach Time!!" : "Hora da Praia!!"}
+            {Languages[language].seasons.summer.subTitle}
           </h2>
         </div>
         <img
@@ -68,8 +70,8 @@ export default function Summer({ currentPage, currentSection, language }) {
               : "summer-imageContainer__text1 summer-text-image-1-out"
           }
         >
-          <h1>Lorem Ipsum</h1>
-          <h2>example lotem damet asbterco limtel.</h2>
+          <h1>{Languages[language].seasons.summer.text1.h1}</h1>
+          <h2>{Languages[language].seasons.summer.text1.h2}</h2>
         </div>
         <img
           className={
@@ -96,8 +98,8 @@ export default function Summer({ currentPage, currentSection, language }) {
               : "summer-imageContainer__text2 summer-text-image-2-out"
           }
         >
-          <h1>Lorem Ipsum</h1>
-          <h2>example lotem damet asbterco limtel.</h2>
+          <h1>{Languages[language].seasons.summer.text2.h1}</h1>
+          <h2>{Languages[language].seasons.summer.text2.h2}</h2>
         </div>
       </div>
     </div>

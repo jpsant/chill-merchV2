@@ -8,6 +8,8 @@ import SpringImage2mobile from "../../../../assets/images/spring-2-mobile.png";
 
 import SpringFlower from "../../../../assets/svgs/spring-flower.svg";
 
+import Languages from '../../../../multiLanguages/language';
+
 export default function ({ language, currentSection, currentPage }) {
   return (
     <div className="spring">
@@ -20,7 +22,7 @@ export default function ({ language, currentSection, currentPage }) {
                 : "spring-titleContainer-text-h1 logo-text-out"
             }
           >
-            {language === "english" ? "Spring" : "Primavera"}
+            {Languages[language].seasons.spring.title}
           </h1>
           <h2
             style={{ width: language === "portuguese" ? "auto" : "272px" }}
@@ -30,9 +32,7 @@ export default function ({ language, currentSection, currentPage }) {
                 : "spring-titleContainer-text-h2 logo-text-out"
             }
           >
-            {language === "english"
-              ? "The Love grows here!"
-              : "Onde o amor começa a florescer!"}
+            {Languages[language].seasons.spring.subTitle}
           </h2>
         </div>
         <img
@@ -71,8 +71,8 @@ export default function ({ language, currentSection, currentPage }) {
               : "spring-imageContainer__text1 spring-image-text-1-out"
           }
         >
-          <h1>Lorem Ipsum</h1>
-          <h2>example lotem damet asbterco limtel.</h2>
+          <h1>{Languages[language].seasons.spring.text1.h1}</h1>
+          <h2>{Languages[language].seasons.spring.text1.h2}</h2>
         </div>
         <img
           className={
@@ -99,8 +99,8 @@ export default function ({ language, currentSection, currentPage }) {
               : "spring-imageContainer__text2 spring-image-text-2-out"
           }
         >
-          <h1>Lorem Ipsum</h1>
-          <h2>example lotem damet asbterco limtel.</h2>
+          <h1>{Languages[language].seasons.spring.text2.h1}</h1>
+          <h2>{Languages[language].seasons.spring.text2.h2}</h2>
         </div>
       </div>
     </div>
