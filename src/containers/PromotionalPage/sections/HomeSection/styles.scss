@@ -9,13 +9,21 @@
   color: white;
   z-index: 9999 !important;
 
+  @include respond-to(high) {
+    &__logo {
+      width: 980px;
+    }
+  }
+
   @include respond-to(medium) {
     &__logo {
       width: 680px;
+    }
+  }
 
-      @include respond-to(mobile) {
-        width: 316.66px;
-      }
+  @include respond-to(mobile) {
+    &__logo {
+      width: 316.66px;
     }
   }
 
@@ -23,6 +31,10 @@
     font-family: 'Lobster Regular';
     font-size: 45px;
     font-weight: 400;
+
+    @include respond-to(high) {
+      font-size: 48px;
+    }
 
     @include respond-to(medium) {
       font-size: 40px;
