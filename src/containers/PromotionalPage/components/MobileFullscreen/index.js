@@ -5,6 +5,8 @@ import Bear from "../../../../assets/svgs/Bear.svg";
 
 import ParticlesContainer from "../ParticlesContainer";
 
+import Languages from '../../../../multiLanguages/language';
+
 export default function MobileFullscreen({ setFull, hide, language }) {
   return (
     <>
@@ -20,14 +22,10 @@ export default function MobileFullscreen({ setFull, hide, language }) {
           className="mobileFullScreenContainer-bear"
         />
         <h1>
-          {language === "english"
-            ? "For a better experience on Mobile, we recommend allowing the fullscreen mode."
-            : "Para uma melhor experiência no mobile, nós recomendamos ativar o modo Fullsrcreen"}
+          {Languages[language].fullscreen.title}
         </h1>
         <h2>
-          {language === "english"
-            ? "(you can exit at anytime)"
-            : "(Você pode desativar a qualquer momento)"}
+          {Languages[language].fullscreen.subTitle}
         </h2>
         <button onClick={setFull}>
           {language === "english" ? "Allow" : "Permitir"}

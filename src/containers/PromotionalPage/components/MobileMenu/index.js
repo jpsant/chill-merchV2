@@ -4,6 +4,8 @@ import "./styles.scss";
 import MobileBackground from "../../../../assets/svgs/languageMobileBG.svg";
 import BearLogo from "../../../../assets/svgs/Bear.svg";
 
+import Languages from '../../../../multiLanguages/language';
+
 export default function MobileMenu({
   toggleMenu,
   isToggled,
@@ -52,7 +54,7 @@ export default function MobileMenu({
             toggleMenu();
           }}
         >
-          {language === "english" ? "Home" : "Inicio"}
+          {Languages[language].menu.home}
           <hr/>
         </h1>
         <h1
@@ -62,7 +64,7 @@ export default function MobileMenu({
             toggleMenu();
           }}
         >
-          {language === "english" ? "Seasons" : "Estações"}
+          {Languages[language].menu.seasons}
           <hr/>
         </h1>
         <h1
@@ -72,7 +74,7 @@ export default function MobileMenu({
             toggleMenu();
           }}
         >
-          {language === "english" ? "Collections" : "Coleções"}
+          {Languages[language].menu.collections}
           <hr/>
         </h1>
         <h1
@@ -82,7 +84,7 @@ export default function MobileMenu({
             toggleMenu();
           }}
         >
-          {language === "english" ? "Contact" : "Contato"}
+          {Languages[language].menu.contact}
           <hr/>
         </h1>
       </div>
