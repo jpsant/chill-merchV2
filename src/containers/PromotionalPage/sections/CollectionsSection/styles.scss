@@ -18,6 +18,11 @@
     font-family: "Lobster Regular";
     margin: 0;
 
+    @include respond-to(high) {
+      font-size: 125px;
+      top: 64px !important;
+    }
+
     @include respond-to(medium) {
       top: 7px;
       font-size: 85px;
@@ -36,6 +41,10 @@
     top: 10px;
     opacity: 0;
     width: 100%;
+
+    @include respond-to(high) {
+      top: -10% !important;
+    }
 
     @include respond-to(mobile-medium) {
       width: 100%;
