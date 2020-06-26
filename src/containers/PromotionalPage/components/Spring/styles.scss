@@ -94,6 +94,10 @@
     width: 594px;
     height: 100vh;
 
+    @include respond-to(high) {
+      transform: translateX(-15%);
+    }
+
     @include respond-to(medium) {
       width: 476px;
     }
@@ -110,6 +114,14 @@
       bottom: 0px;
       opacity: 0;
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(high) {
+        transform: translate(-15%, -25%);
+      }
+
+      @include respond-to(high) {
+        width: 650px;
+      }
 
       @include respond-to(medium) {
         width: 400px;
@@ -151,6 +163,14 @@
       top: 0px;
       opacity: 1;
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(high) {
+        transform: translate(70%, 25%);
+      }
+
+      @include respond-to(high) {
+        width: 650px;
+      }
 
       @include respond-to(medium) {
         width: 400px;
@@ -213,6 +233,10 @@
         font-family: "Roboto Regular";
         font-size: 38px;
 
+        @include respond-to(high) {
+          font-size: 42px;
+        }
+
         @include respond-to(medium) {
           font-size: 30px;
         }
@@ -229,6 +253,10 @@
         opacity: 0.7;
         font-weight: 200;
         width: 225px;
+
+        @include respond-to(high) {
+          font-size: 20px;
+        }
 
         @include respond-to(medium) {
           font-size: 12px;
@@ -256,6 +284,11 @@
       left: 0px;
       opacity: 0;
 
+      @include respond-to(high) {
+        left: 350px !important;
+        text-align: left;
+      }
+
       @include respond-to(medium) {
         left: 90px;
         opacity: 0;
@@ -279,6 +312,10 @@
         font-family: "Roboto Regular";
         font-size: 38px;
 
+        @include respond-to(high) {
+          font-size: 42px;
+        }
+
         @include respond-to(medium) {
           font-size: 30px;
         }
@@ -295,6 +332,10 @@
         opacity: 0.7;
         font-weight: 200;
         width: 225px;
+
+        @include respond-to(high) {
+          font-size: 20px;
+        }
 
         @include respond-to(medium) {
           font-size: 12px;
