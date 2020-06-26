@@ -1,4 +1,21 @@
 let english = {
+
+  menu: {
+    home: 'Home',
+    seasons: 'Seasons',
+    collections: 'Collections',
+    contact: 'Contact'
+  },
+
+  fullscreen: {
+    title: 'For a better experience on Mobile, we recommend allowing the fullscreen mode',
+    subTitle: '(you can exit at anytime)'
+  },
+
+  homeSection: {
+    title: "The Chillest fictional merch on the World!",
+  },
+
   seasons: {
     winter: {
       title: "Winter",
@@ -61,10 +78,6 @@ let english = {
     },
   },
 
-  homeSection: {
-    title: "The Chillest fictional merch on the World!",
-  },
-
   collectionsSection: {
     title: "For all the Occasions",
 
@@ -83,6 +96,7 @@ let english = {
     button: "Visit our Website",
     newsletter: "Subscribe to our newsletter",
     social: "Follow us on Social Media",
+    email: 'Your E-mail'
   },
 };
 

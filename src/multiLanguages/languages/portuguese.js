@@ -1,5 +1,21 @@
 let portuguese = {
 
+  menu: {
+    home: 'Inicio',
+    seasons: 'Estações',
+    collections: 'Coleções',
+    contact: 'Contato'
+  },
+
+  fullscreen: {
+    title: 'Para uma melhor experiência no mobile, nós recomendamos ativar o modo Fullsrcreen',
+    subTitle: '(Você pode desativar a qualquer momento)'
+  },
+
+  homeSection: {
+    title: 'A Marca de roupas mais tranquila do Mundo!'
+  },
+
   seasons: {
 
     winter: {
@@ -64,10 +80,6 @@ let portuguese = {
 
   },
 
-  homeSection: {
-    title: 'A Marca de roupas mais tranquila do Mundo!'
-  },
-
   collectionsSection: {
     title: 'Para todas as Ocasiões',
 
@@ -85,9 +97,9 @@ let portuguese = {
     title: 'O que você está esperando?!',
     button: 'Visite nosso Website',
     newsletter: 'Assine a nossa newsletter',
-    social: 'Nos siga nas Redes Sociais'
+    social: 'Nos siga nas Redes Sociais',
+    email: 'Seu E-mail'
   }
-
 }
 
 export default portuguese;
