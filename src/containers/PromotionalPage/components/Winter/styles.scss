@@ -43,6 +43,10 @@
         transform: translateY(0%);
         opacity: 0;
 
+        @include respond-to(high) {
+          font-size: 115px;
+        }
+
         @include respond-to(medium) {
           font-size: 90px;
         }
@@ -113,6 +117,10 @@
       opacity: 0;
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
 
+      @include respond-to(high) {
+        width: 350px;
+      }
+
       @include respond-to(medium) {
         width: 255px;
       }
@@ -138,6 +146,10 @@
       bottom: 0;
       opacity: 0;
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(high) {
+        width: 350px;
+      }
 
       @include respond-to(medium) {
         width: 255px;
@@ -170,6 +182,10 @@
       transform: translateX(-25%);
       opacity: 0;
 
+      @include respond-to(high) {
+        transform: translateX(5%) !important;
+      }
+
       @include respond-to(mobile) {
         transform: translateX(0);
         top: 50%;
@@ -183,6 +199,10 @@
         margin: 0;
         font-family: "Roboto Regular";
         font-size: 38px;
+
+        @include respond-to(high) {
+          font-size: 40px;
+        }
 
         @include respond-to(medium) {
           font-size: 30px;
@@ -200,6 +220,10 @@
         opacity: 0.7;
         font-weight: 200;
         width: 225px;
+
+        @include respond-to(high) {
+          font-size: 20px;
+        }
 
         @include respond-to(medium) {
           font-size: 12px;
@@ -224,6 +248,10 @@
       flex-direction: column;
       transform: translateX(25%);
       opacity: 0;
+
+      @include respond-to(high) {
+        transform: translateX(15%) !important;
+      }
 
       @include respond-to(mobile) {
         transform: translateX(0);
@@ -256,6 +284,10 @@
         opacity: 0.7;
         font-weight: 200;
         width: 225px;
+
+        @include respond-to(high) {
+          font-size: 20px;
+        }
 
         @include respond-to(medium) {
           font-size: 12px;
