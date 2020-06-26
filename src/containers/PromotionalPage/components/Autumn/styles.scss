@@ -108,6 +108,10 @@
       right: 10px;
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
 
+      @include respond-to(high) {
+        width: 590px;
+      }
+
       @include respond-to(medium) {
         width: 400px;
       }
@@ -149,6 +153,10 @@
       top: 35%;
       opacity: 0;
       box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.4);
+
+      @include respond-to(high) {
+        width: 450px;
+      }
 
       @include respond-to(medium) {
         width: 300px;
@@ -208,6 +216,10 @@
         font-family: "Roboto Regular";
         font-size: 38px;
 
+        @include respond-to(high) {
+          font-size: 42px;
+        }
+
         @include respond-to(medium) {
           font-size: 30px;
         }
@@ -224,6 +236,10 @@
         opacity: 0.7;
         font-weight: 200;
         width: 360px;
+
+        @include respond-to(high) {
+          font-size: 20px;
+        }
 
         @include respond-to(medium) {
           font-size: 12px;
@@ -261,6 +277,10 @@
         font-family: "Roboto Regular";
         font-size: 38px;
 
+        @include respond-to(high) {
+          font-size: 42px;
+        }
+
         @include respond-to(medium) {
           font-size: 30px;
         }
@@ -277,6 +297,10 @@
         opacity: 0.7;
         font-weight: 200;
         width: 360px;
+
+        @include respond-to(high) {
+          font-size: 20px;
+        }
 
         @include respond-to(medium) {
           font-size: 12px;
