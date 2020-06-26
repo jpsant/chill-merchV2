@@ -14,6 +14,8 @@ import image4 from "../../../../assets/images/card-4.png";
 import image5 from "../../../../assets/images/card-5.png";
 import image6 from "../../../../assets/images/card-6.png";
 
+import Language from '../../../../multiLanguages/language';
+
 export default function CollectionstSection({ season, language, currentPage }) {
   const responsive = {
     desktop: {
@@ -53,9 +55,7 @@ export default function CollectionstSection({ season, language, currentPage }) {
               : "collectionsSectionContainer-h1 collections-title-out "
           }
         >
-          {language === "english"
-            ? "For all the Occasions"
-            : "Para todas as Ocasiões"}
+          {Language[language].collectionsSection.title}
         </h1>
         <Carousel
           additionalTransfrom={0}
@@ -84,43 +84,37 @@ export default function CollectionstSection({ season, language, currentPage }) {
         >
           <Card
             language={language}
-            title={language === "english" ? "Casual Choise" : "Escolha Casual"}
+            title={Language[language].collectionsSection.cards.card1}
             BGColor="#114566"
             image={image1}
           />
           <Card
             language={language}
-            title={
-              language === "english" ? "Sunday Morning" : "Doming de Manhã"
-            }
+            title={Language[language].collectionsSection.cards.card2}
             BGColor="#954930"
             image={image2}
           />
           <Card
             language={language}
-            title={language === "english" ? "Morning Wakeup" : "Café da manhã"}
+            title={Language[language].collectionsSection.cards.card3}
             BGColor="#254F55"
             image={image3}
           />
           <Card
             language={language}
-            title={language === "english" ? "Workout Time!" : "Hora de Suar!"}
+            title={Language[language].collectionsSection.cards.card4}
             BGColor="#273944"
             image={image4}
           />
           <Card
             language={language}
-            title={
-              language === "english"
-                ? "Winter Collection"
-                : "Coleção de inverno"
-            }
+            title={Language[language].collectionsSection.cards.card5}
             BGColor="#327773"
             image={image5}
           />
           <Card
             language={language}
-            title={language === "english" ? "Player 1 Start!" : "Jogador Nº 1"}
+            title={Language[language].collectionsSection.cards.card6}
             BGColor="#9B041F"
             image={image6}
           />

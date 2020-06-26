@@ -15,7 +15,7 @@ import SummerSend from "../../../../assets/svgs/summer-send.svg";
 
 import ParticlesBackground from "../../components/ParticlesContainer";
 
-import Languages from '../../../../multiLanguages/languages';
+import Languages from '../../../../multiLanguages/language';
 
 export default function ContactSection({ currentPage, season, language }) {
   function submitFormHandler(e) {
@@ -36,10 +36,9 @@ export default function ContactSection({ currentPage, season, language }) {
               ? "contactSectionContainer__visit-title contact-title-in"
               : "contactSectionContainer__visit-title contact-title-out"
           }
+          style={{width: language === "english" ? '990px' : 'auto'}}
         >
-          {language === "english"
-            ? "What are you waiting for?!"
-            : "O que você está esperando?!"}
+          {Languages[language].contactSection.title}
         </h1>
         <img
           className={
@@ -58,9 +57,7 @@ export default function ContactSection({ currentPage, season, language }) {
           }
           style={{ color: colors[season] }}
         >
-          {language === "english"
-            ? "Visit our Website!"
-            : "Visite nosso Website!"}
+          {Languages[language].contactSection.button}
         </button>
       </div>
 
@@ -72,14 +69,12 @@ export default function ContactSection({ currentPage, season, language }) {
         }
       >
         <h1>
-          {language === "english"
-            ? "Subscribe to our newsletter"
-            : "Assine a nossa newsletter"}
+          {Languages[language].contactSection.newsletter}
         </h1>
         <form onSubmit={submitFormHandler}>
           <input
             type="email"
-            placeholder={language === "english" ? "Your E-mail" : "Seu E-mail"}
+            placeholder={Languages[language].contactSection.email}
           />
           <button type="submit">
             <img src={images[season]} alt="submit form" />
@@ -95,9 +90,7 @@ export default function ContactSection({ currentPage, season, language }) {
         }
       >
         <h1>
-          {language === "english"
-            ? "Follow us on Social Media"
-            : "Nos siga nas Redes Sociais"}
+          {Languages[language].contactSection.social}
         </h1>
         <div className="contactSectionContainer__social-links">
           <a href="https://www.instagram.com/jampalo_/">
